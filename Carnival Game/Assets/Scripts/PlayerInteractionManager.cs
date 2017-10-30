@@ -10,16 +10,46 @@ public class PlayerInteractionManager : MonoBehaviour {
     // Reference to the player
     public GameObject player;
 
+    // Collider to use for interaction triggers
+    public Collider2D interactionCollider;
+
     // Inventory component of player
     private Inventory playerInventory;
 
+    // List of objects that the player is currently intersecting with
+    private List<GameObject> objectsInRange;
+
     private void Start()
     {
+        objectsInRange = new List<GameObject>();
         playerInventory = player.GetComponent<Inventory>();
     }
 
     private void Update()
     {
+
+        if(objectsInRange.Count > 0)
+        {
+            // Comapre distances and focus on the closest interactable
+            float minDistance = float.MaxValue;
+            focusedObject = null;
+
+            foreach (GameObject go in objectsInRange)
+            {
+                float dist = Vector3.Distance(go.transform.position, transform.position);
+                if(dist < minDistance && go.GetComponent<InteractionObject>().GetInteractable())
+                {
+                    minDistance = dist;
+                    focusedObject = go;
+                }
+            }
+        }
+        else
+        {
+            focusedObject = null;
+        }
+
+        // Test for interaction input
         if(Input.GetButtonDown("Interact") && focusedObject)
         {
             InteractionObject interObj = focusedObject.GetComponent<InteractionObject>();
@@ -37,23 +67,25 @@ public class PlayerInteractionManager : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Check if object has an interaction object attached
-        if(other.GetComponent<InteractionObject>())
+        // Make sure our InteractionCollider is the one that is overlapping
+        if(other.IsTouching(interactionCollider) && other.GetComponent<InteractionObject>())
         {
-            // Debug.Log("Focused object: " + other.name);
-            focusedObject = other.gameObject;
+            if(!objectsInRange.Contains(other.gameObject))
+            {
+                Debug.Log("Focused objects size: " + objectsInRange.Count);
+                objectsInRange.Add(other.gameObject);
+            }
         }
     }
 
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        // Remove focused object if out of range
-        // Only make the focused object null if it is the object we initially focused.
-        // If it is a different object, then there are overlapping interactables.
-        if (focusedObject == other.gameObject)
+        // Make sure our interactionCollider is the collider that left
+        if (!other.IsTouching(interactionCollider))
         {
-            focusedObject = null;
+            Debug.Log("Focused objects size: " + objectsInRange.Count);
+            objectsInRange.Remove(other.gameObject);
         }
     }
 
@@ -61,6 +93,5 @@ public class PlayerInteractionManager : MonoBehaviour {
     {
         playerInventory.AddItem(item);
     }
-
 
 }

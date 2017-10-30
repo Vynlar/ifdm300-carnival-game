@@ -115,5 +115,10 @@ public class InteractionObject : MonoBehaviour {
     {
         interactable = boolean;
     }
+
+    public bool GetInteractable()
+    {
+        return interactable;
+    }
 	
 }

@@ -258,6 +258,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!61 &265991556 stripped
+BoxCollider2D:
+  m_PrefabParentObject: {fileID: 61343663231173256, guid: ee4de2966f9bad140b8eb1c498fd9057,
+    type: 2}
+  m_PrefabInternal: {fileID: 1816710255}
 --- !u!1 &337917209
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,7 +433,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4296369242822364, guid: 19184e72d5b0b9647accb404b02dd183, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 13.02026
+      value: 13.44
       objectReference: {fileID: 0}
     - target: {fileID: 4296369242822364, guid: 19184e72d5b0b9647accb404b02dd183, type: 2}
       propertyPath: m_LocalPosition.y
@@ -484,7 +489,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4966454518821372, guid: 88f1472ea90066e42a6126feb1743e7a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1.85
+      value: 4.33
       objectReference: {fileID: 0}
     - target: {fileID: 4966454518821372, guid: 88f1472ea90066e42a6126feb1743e7a, type: 2}
       propertyPath: m_LocalPosition.y
@@ -523,6 +528,10 @@ Prefab:
         type: 2}
       propertyPath: m_SortingLayer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1194992315538532, guid: 88f1472ea90066e42a6126feb1743e7a, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 88f1472ea90066e42a6126feb1743e7a, type: 2}
@@ -1230,6 +1239,11 @@ Prefab:
       propertyPath: m_SortingLayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114394398936538790, guid: ee4de2966f9bad140b8eb1c498fd9057,
+        type: 2}
+      propertyPath: interactionCollider
+      value: 
+      objectReference: {fileID: 265991556}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ee4de2966f9bad140b8eb1c498fd9057, type: 2}
   m_IsPrefabParent: 0
