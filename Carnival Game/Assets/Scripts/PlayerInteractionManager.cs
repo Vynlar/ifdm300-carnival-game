@@ -37,7 +37,8 @@ public class PlayerInteractionManager : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("InterObject"))
+        // Check if object has an interaction object attached
+        if(other.GetComponent<InteractionObject>())
         {
             // Debug.Log("Focused object: " + other.name);
             focusedObject = other.gameObject;
