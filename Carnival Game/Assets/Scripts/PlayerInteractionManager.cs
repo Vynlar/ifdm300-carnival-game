@@ -27,27 +27,7 @@ public class PlayerInteractionManager : MonoBehaviour {
 
     private void Update()
     {
-
-        if(objectsInRange.Count > 0)
-        {
-            // Comapre distances and focus on the closest interactable
-            float minDistance = float.MaxValue;
-            focusedObject = null;
-
-            foreach (GameObject go in objectsInRange)
-            {
-                float dist = Vector3.Distance(go.transform.position, transform.position);
-                if(dist < minDistance && go.GetComponent<InteractionObject>().GetInteractable())
-                {
-                    minDistance = dist;
-                    focusedObject = go;
-                }
-            }
-        }
-        else
-        {
-            focusedObject = null;
-        }
+        UpdateFocusedObject();
 
         // Test for interaction input
         if(Input.GetButtonDown("Interact") && focusedObject)
@@ -65,6 +45,25 @@ public class PlayerInteractionManager : MonoBehaviour {
         }
     }
 
+    private void UpdateFocusedObject()
+    {
+        focusedObject = null;
+
+        // Compare distances and focus on the closest interactable
+        float minDistance = float.MaxValue;
+
+        foreach (GameObject go in objectsInRange)
+        {
+            float dist = Vector3.Distance(go.transform.position, transform.position);
+            if (dist < minDistance && go.GetComponent<InteractionObject>().GetInteractable())
+            {
+                minDistance = dist;
+                focusedObject = go;
+            }
+        }
+
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Make sure our InteractionCollider is the one that is overlapping
@@ -72,7 +71,6 @@ public class PlayerInteractionManager : MonoBehaviour {
         {
             if(!objectsInRange.Contains(other.gameObject))
             {
-                Debug.Log("Focused objects size: " + objectsInRange.Count);
                 objectsInRange.Add(other.gameObject);
             }
         }
@@ -84,7 +82,6 @@ public class PlayerInteractionManager : MonoBehaviour {
         // Make sure our interactionCollider is the collider that left
         if (!other.IsTouching(interactionCollider))
         {
-            Debug.Log("Focused objects size: " + objectsInRange.Count);
             objectsInRange.Remove(other.gameObject);
         }
     }
