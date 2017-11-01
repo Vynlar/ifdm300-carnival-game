@@ -23,7 +23,7 @@ public class InteractionObject : MonoBehaviour {
         public bool loop = false;
 
         [Range(0f,1f)]
-        public float volume = 1f;
+        public float volume = 0.5f;
 
         public float delay = 0.0f;
     }

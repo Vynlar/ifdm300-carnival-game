@@ -9,7 +9,7 @@ using UnityEngine.Events;
 // to change based on the state of the game (or character)
 
 
-public class Dialog : MonoBehaviour {
+public class Dialogue : MonoBehaviour {
 
     // Might be good to figure out a better way to make states. At least with this, 
     // we can make as many different states per NPC as we want... however, just using strings instead
@@ -18,7 +18,7 @@ public class Dialog : MonoBehaviour {
 
     // Diaglog statements, with optional animations attached to each.
     [Serializable]
-    public class DialogStatement
+    public class DialogueStatement
     {
         [TextArea(3,10)] // Makes text fields larger for dialog
         public string statement;
@@ -27,18 +27,18 @@ public class Dialog : MonoBehaviour {
 
     // All possible dialog streams
     [Serializable]
-    public class DialogList
+    public class DialogueList
     {
         public string StateKey;
-        public List<DialogStatement> dialogStatements;
+        public List<DialogueStatement> dialogStatements;
     }
 
     // This is used for the player to put dialog stuff into.
     // (Because it is serializable)
-    public DialogList[] dQueues;
+    public DialogueList[] dQueues;
 
     // We won't populate this in the inspector becuase it isn't serializeable.
-    private Dictionary<string, List<DialogStatement>> dialogTrees;
+    private Dictionary<string, List<DialogueStatement>> dialogTrees;
 
 
     
@@ -47,7 +47,7 @@ public class Dialog : MonoBehaviour {
     {
 
         // Instantiate new Dictionary
-        dialogTrees = new Dictionary<string, List<DialogStatement>>();
+        dialogTrees = new Dictionary<string, List<DialogueStatement>>();
 
         // populate it with the list of stuff the user made.
         for(int i = 0; i < dQueues.Length; i++)
@@ -55,11 +55,16 @@ public class Dialog : MonoBehaviour {
             dialogTrees.Add(dQueues[i].StateKey, dQueues[i].dialogStatements);
         }
 
-        currentState = "";
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    public void SetDialogState(string state)
+    {
+        currentState = state;
+    }
+
+    public void TriggerDialog()
+    {
+        DialogueManager.instance.SetDialogSequence(dialogTrees[currentState]);
+        DialogueManager.instance.ActivateDialog();
+    }
 }

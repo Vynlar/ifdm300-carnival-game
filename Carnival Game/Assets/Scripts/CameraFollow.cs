@@ -17,9 +17,12 @@ public class CameraFollow : MonoBehaviour {
     private Rigidbody2D playerRigidBody;
 
 	// Use this for initialization
-	void Start () {
-        followCam = Camera.main;
+	void Awake () {
+
         playerRigidBody = GetComponent<Rigidbody2D>();
+
+        // Get reference to main camera
+        followCam = Camera.main;
 
         // Set initial camera position
         followCam.transform.position.Set(transform.position.x + offsetX, 
