@@ -8,8 +8,14 @@ public class DialogueManager : MonoBehaviour {
     // Static instance of this manager (singleton)
     public static DialogueManager instance;
 
+    // Canvas that holds the dialogue elements
+    public Canvas dialogueCanvas;
+
     // Text that will be inside the dialog box.
-    public Text dialogText;
+    public Text dialogueText;
+
+    // Reference to player 
+    public PlayerController pController;
 
     // Speed at which characters are displayed for dialogue
     public float playSpeed;
@@ -18,10 +24,10 @@ public class DialogueManager : MonoBehaviour {
     private List<Dialogue.DialogueStatement> currentConversation;
 
     // Is the manager currently showing text?
-    private bool isPlayingText = false;
+    // private bool isPlayingText = false;
 
     // Is the manager done revealing text?
-    private bool finishedPlaying = false;
+    // private bool finishedPlaying = false;
 
 	// Use this for initialization
 	void Start () {
@@ -45,7 +51,8 @@ public class DialogueManager : MonoBehaviour {
 
     public void ActivateDialog()
     {
-        dialogText.text = currentConversation[0].statement;
+
+        dialogueText.text = currentConversation[0].statement;
         // enable the dialog panel/canvas
         // start displaying dialog (coroutine?)
     }

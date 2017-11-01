@@ -1190,7 +1190,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 683225ad389fb574c9007ceb98629f18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogText: {fileID: 1808773701}
+  dialogueCanvas: {fileID: 0}
+  dialogueText: {fileID: 0}
   playSpeed: 0
 --- !u!4 &1290051033
 Transform:
@@ -1526,9 +1527,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Boy, I like UI systems. They sure make dialog systems very easy to implement.
-    I hope that, one day, I can get this dialog system working for different aspect
-    ratios without totally breaking the game. Yeah boi.
+  m_Text: Try talking to the Giant red shape (Press E when close)
 --- !u!222 &1808773702
 CanvasRenderer:
   m_ObjectHideFlags: 0

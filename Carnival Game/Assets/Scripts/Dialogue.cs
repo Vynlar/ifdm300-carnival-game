@@ -57,11 +57,13 @@ public class Dialogue : MonoBehaviour {
 
     }
 
+    // Sets the current string array to use for dialog
     public void SetDialogState(string state)
     {
         currentState = state;
     }
 
+    // Activate the dialogue manager
     public void TriggerDialog()
     {
         DialogueManager.instance.SetDialogSequence(dialogTrees[currentState]);
