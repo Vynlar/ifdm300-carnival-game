@@ -267,7 +267,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 190424209}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 411.5, y: 231.5, z: 0}
+  m_LocalPosition: {x: 447, y: 291, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1234353822}
@@ -1118,7 +1118,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1234353821}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.000030517578, y: 115.80002, z: 0}
+  m_LocalPosition: {x: 0.000030517578, y: 145.55002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1808773700}
@@ -1190,8 +1190,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 683225ad389fb574c9007ceb98629f18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueCanvas: {fileID: 0}
-  dialogueText: {fileID: 0}
+  dialogueCanvas: {fileID: 190424212}
+  dialogueText: {fileID: 1808773701}
+  pController: {fileID: 0}
   playSpeed: 0
 --- !u!4 &1290051033
 Transform:
@@ -1484,7 +1485,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1808773699}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -259.245, y: 63.44998, z: 0}
+  m_LocalPosition: {x: -281.61, y: 79.514984, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1234353822}
