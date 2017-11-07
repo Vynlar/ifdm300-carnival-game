@@ -17,11 +17,6 @@ public class Inventory : MonoBehaviour {
         item.GetComponent<SpriteRenderer>().enabled = false;
         item.GetComponent<InteractionObject>().SetInteractable(false);
         inventory.Add(item);
-
-        foreach(GameObject go in inventory)
-        {
-            Debug.Log(go.name);
-        }
     }
 
     public void RemoveItem(GameObject item)
@@ -44,12 +39,9 @@ public class Inventory : MonoBehaviour {
             bool found = false;
             for (int j = 0; j < inventory.Count; j++)
             {
-                Debug.Log("Comparing: " + requiredObjs[i].name + " vs " + inventory[j].name);
-
                 if(requiredObjs[i].name == inventory[j].name)
                 {
                     found = true;
-                    Debug.Log("Found " + requiredObjs[i].name + "in inventory: " + inventory[j].name);
                 }
             }
             if (!found)

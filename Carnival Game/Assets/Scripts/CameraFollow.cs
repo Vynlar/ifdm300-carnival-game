@@ -36,9 +36,5 @@ public class CameraFollow : MonoBehaviour {
             Vector3.Lerp(followCam.transform.position, new Vector3(transform.position.x + offsetX + playerRigidBody.velocity.x,
                         transform.position.y + offsetY + playerRigidBody.velocity.y,
                         followCam.transform.position.z), lerpSpeed * Time.deltaTime);
-
-
-        
-
 	}
 }
