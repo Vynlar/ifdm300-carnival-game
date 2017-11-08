@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour {
 
     // Static instance of this manager (singleton)
-    public static DialogueManager instance;
+    public static DialogueManager Instance;
 
     // Canvas that holds the dialogue elements
     public Canvas dialogueCanvas;
@@ -23,43 +23,68 @@ public class DialogueManager : MonoBehaviour {
     // Text conversation to play
     private List<Dialogue.DialogueStatement> currentConversation;
 
-    // Is the manager currently showing text?
-    // private bool isPlayingText = false;
-
-    // Is the manager done revealing text?
-    // private bool finishedPlaying = false;
+    private int statementIndex = 0;
+    private bool isPlaying = false;
+    private bool goingToPlay = false;
 
 	// Use this for initialization
 	void Start () {
-
-
         // Make sure there is only one instance 
-		if(instance == null)
+		if(Instance == null)
         {
-            instance = this;
+            Instance = this;
         }
         else
         {
             Destroy(this);
         }
+
+        // Disable the Canvas on start
+        dialogueCanvas.enabled = false;
 	}
 
     public void SetDialogSequence(List<Dialogue.DialogueStatement> sequence)
     {
+        statementIndex = 0;
         currentConversation = sequence;
     }
 
     public void ActivateDialog()
     {
-
+        dialogueCanvas.enabled = true;
+        //isPlaying = true;
+        goingToPlay = true;
+        statementIndex = 0;
         dialogueText.text = currentConversation[0].statement;
-        // enable the dialog panel/canvas
-        // start displaying dialog (coroutine?)
+
+        // disable player controls while dialogue is happening
+        pController.enabled = false;
     }
 
 	// Update is called once per frame
 	void Update () {
-		
+
+		if(isPlaying && Input.GetButtonDown("Interact"))
+        {
+            statementIndex++;
+
+            // Did we reach the end of the dialogue?
+            if(statementIndex >= currentConversation.Count)
+            {
+                isPlaying = false;
+                goingToPlay = false;
+                dialogueCanvas.enabled = false;
+                pController.enabled = true;
+            }
+            else
+            {
+                dialogueText.text = currentConversation[statementIndex].statement;
+            }
+        }
+        else if (goingToPlay && !isPlaying)
+        {
+            isPlaying = true;
+        }
 	}
 
 }

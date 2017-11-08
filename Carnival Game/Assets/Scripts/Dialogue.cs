@@ -66,7 +66,7 @@ public class Dialogue : MonoBehaviour {
     // Activate the dialogue manager
     public void TriggerDialog()
     {
-        DialogueManager.instance.SetDialogSequence(dialogTrees[currentState]);
-        DialogueManager.instance.ActivateDialog();
+        DialogueManager.Instance.SetDialogSequence(dialogTrees[currentState]);
+        DialogueManager.Instance.ActivateDialog();
     }
 }

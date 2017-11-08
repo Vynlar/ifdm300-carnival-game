@@ -28,21 +28,6 @@ public class PlayerInteractionManager : MonoBehaviour {
     private void Update()
     {
         UpdateFocusedObject();
-
-        // Test for interaction input
-        if(Input.GetButtonDown("Interact") && focusedObject)
-        {
-            InteractionObject interObj = focusedObject.GetComponent<InteractionObject>();
-            bool meetsRequirements = playerInventory.CheckIfContainsRequiredItems(interObj.requiredObjects);
-            Debug.Log("player meets requirements for " + interObj.name + ": " + meetsRequirements);
-            if (interObj.OnInteract(meetsRequirements))
-            {
-                if(interObj.isPickup)
-                {
-                    addToPlayerInventory(focusedObject);
-                }
-            }
-        }
     }
 
     private void UpdateFocusedObject()
@@ -91,4 +76,20 @@ public class PlayerInteractionManager : MonoBehaviour {
         playerInventory.AddItem(item);
     }
 
+    public void Interact()
+    {
+        if (focusedObject)
+        {
+            InteractionObject interObj = focusedObject.GetComponent<InteractionObject>();
+            bool meetsRequirements = playerInventory.CheckIfContainsRequiredItems(interObj.requiredObjects);
+            Debug.Log("player meets requirements for " + interObj.name + ": " + meetsRequirements);
+            if (interObj.OnInteract(meetsRequirements))
+            {
+                if (interObj.isPickup)
+                {
+                    addToPlayerInventory(focusedObject);
+                }
+            }
+        }
+    }
 }

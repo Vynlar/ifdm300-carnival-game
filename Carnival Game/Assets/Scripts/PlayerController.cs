@@ -9,17 +9,26 @@ public class PlayerController : MonoBehaviour {
     public float runSpeed = 10;
 
     private Rigidbody2D rb2d; // Character's rigidbody
-    private BoxCollider2D bx2d; // Character's boxCollider
+    private PlayerInteractionManager playerIM; // InteractionManager
 
     void Awake()
     {
         // Get component references
         rb2d = GetComponent<Rigidbody2D>();
-
+        playerIM = GetComponent<PlayerInteractionManager>();
     }
-	
-	// Update is called once per frame
-	void FixedUpdate () {
+
+    private void Update()
+    {
+        // Test for interaction input
+        if (Input.GetButtonDown("Interact"))
+        {
+            playerIM.Interact();
+        }
+    }
+
+    // Using FixedUpdate for physics
+    void FixedUpdate () {
 
         // Check for left and right input 
         if (Input.GetKey(KeyCode.D))
@@ -37,6 +46,5 @@ public class PlayerController : MonoBehaviour {
             rb2d.velocity = rb2d.velocity.x < 0 ? new Vector2(-maxRunSpeed, rb2d.velocity.y) : 
                 new Vector2(maxRunSpeed, rb2d.velocity.y);
         }
-
     }
 }
