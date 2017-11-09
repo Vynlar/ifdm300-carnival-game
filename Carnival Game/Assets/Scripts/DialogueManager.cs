@@ -83,6 +83,13 @@ public class DialogueManager : MonoBehaviour {
 
         // disable player controls while dialogue is happening
         pController.enabled = false;
+
+        // Check if we're alraedy at the end (dialogue count is only one
+        if (statementIndex == currentConversation.dialogStatements.Count - 1)
+        {
+            dialogueActionsText.ForEach((Button button) => 
+                button.gameObject.transform.SetParent(GameObject.Find("ActionPanel").transform));
+        }
     }
 
     public void HideDialogue()
