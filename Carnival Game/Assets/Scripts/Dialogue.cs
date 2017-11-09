@@ -64,7 +64,9 @@ public class Dialogue : MonoBehaviour {
         // populate it with the list of stuff the user made.
         foreach(DialogueList dlist in dQueues)
         {
-            dlist.dialogueActions.Add(new DialogueAction("Done", new UnityAction(DialogueManager.Instance.HideDialogue)));
+           //dlist.dialogueActions.Add(new DialogueAction("Done", 
+                //new UnityAction(DialogueManager.Instance.HideDialogue)));
+
             dialogTrees.Add(dlist.StateKey, dlist);
         }
 

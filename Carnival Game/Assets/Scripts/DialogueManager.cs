@@ -107,7 +107,6 @@ public class DialogueManager : MonoBehaviour {
             // We are on the last dialogue frame
             if (statementIndex == currentConversation.dialogStatements.Count - 1)
             {
-                Debug.Log(dialogueActionsText.Count);
                 dialogueActionsText.ForEach((Button button) => button.gameObject.transform.SetParent(GameObject.Find("ActionPanel").transform));
             }
 
