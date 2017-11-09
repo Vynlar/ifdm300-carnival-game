@@ -35,7 +35,7 @@ public class DialogueManager : MonoBehaviour {
     private bool goingToPlay = false;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
         // Make sure there is only one instance 
 		if(Instance == null)
         {
@@ -67,16 +67,19 @@ public class DialogueManager : MonoBehaviour {
 
         foreach (Button b in dialogueActionsText)
         {
-            Destroy(b);
+            Destroy(b.gameObject);
         }
+
         dialogueActionsText.Clear();
 
-        currentConversation.dialogueActions.ForEach((Dialogue.DialogueAction action) => {
-            Button button = Instantiate(buttonPrefab).GetComponent<Button>();
+        foreach(Dialogue.DialogueAction dAction in currentConversation.dialogueActions)
+        {
+            GameObject actionButton = Instantiate(buttonPrefab);
+            Button button = actionButton.GetComponent<Button>();
             dialogueActionsText.Add(button);
-            button.onClick.AddListener(action.action.Invoke);
-            button.GetComponentInChildren<Text>().text = action.text;
-        });
+            button.onClick.AddListener(dAction.action.Invoke);
+            button.GetComponentInChildren<Text>().text = dAction.text;
+        }
 
         // disable player controls while dialogue is happening
         pController.enabled = false;
