@@ -674,8 +674,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 403934158}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 933.683, y: 109.1807, z: 0.28894457}
-  m_LocalScale: {x: 1.8824253, y: 1.8824259, z: 1.8824259}
+  m_LocalPosition: {x: 132.71098, y: -70.59097, z: 0.28894457}
+  m_LocalScale: {x: 1.8824253, y: 1.882426, z: 1.882426}
   m_Children:
   - {fileID: 606485796}
   m_Father: {fileID: 558855357}
@@ -1165,10 +1165,11 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 606485795}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.000061035156, y: 151.55, z: 0}
+  m_LocalPosition: {x: 0, y: 103.800026, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1122093262}
+  - {fileID: 703337475}
   m_Father: {fileID: 403934162}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1517,6 +1518,97 @@ Transform:
   m_Father: {fileID: 1246241398}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &703337474
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 703337475}
+  - component: {fileID: 703337478}
+  - component: {fileID: 703337477}
+  - component: {fileID: 703337476}
+  m_Layer: 5
+  m_Name: ActionPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &703337475
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 703337474}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -60.500004, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 606485796}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.0000019074178, y: -60.5}
+  m_SizeDelta: {x: -0.000061035, y: -121}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &703337476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 703337474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -405508275, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 10
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 5
+  m_Spacing: 3
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+--- !u!114 &703337477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 703337474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &703337478
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 703337474}
 --- !u!1 &711291730
 GameObject:
   m_ObjectHideFlags: 0
@@ -2392,10 +2484,26 @@ MonoBehaviour:
   - StateKey: base
     dialogStatements:
     - statement: ohai there.
-      dialogAnim: {fileID: 0}
     - statement: It'd be really cool if the whole <b>Dialogue Manager</b> decided
         to work the way I wanted...
-      dialogAnim: {fileID: 0}
+    dialogueActions:
+    - text: Done
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1290051032}
+            m_MethodName: HideDialogue
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
 --- !u!58 &1115539121
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2481,7 +2589,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1122093261}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -500.22003, y: 82.754974, z: 0}
+  m_LocalPosition: {x: -232.15501, y: 56.969994, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 606485796}
@@ -2930,7 +3038,7 @@ GameObject:
   - component: {fileID: 1290051033}
   - component: {fileID: 1290051032}
   m_Layer: 0
-  m_Name: DialogManager
+  m_Name: DialogueManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2949,6 +3057,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueCanvas: {fileID: 403934161}
   dialogueText: {fileID: 1122093263}
+  buttonPrefab: {fileID: 1125612737880852, guid: 274f4ff52c55b854cbc63606ed2c3759,
+    type: 2}
   pController: {fileID: 865308951}
   playSpeed: 1
 --- !u!4 &1290051033
@@ -3192,8 +3302,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1444232749}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 933.683, y: 109.1807, z: 0.28894457}
-  m_LocalScale: {x: 1.8824253, y: 1.8824259, z: 1.8824259}
+  m_LocalPosition: {x: 132.71098, y: -70.59097, z: 0.28894457}
+  m_LocalScale: {x: 1.8824253, y: 1.882426, z: 1.882426}
   m_Children: []
   m_Father: {fileID: 558855357}
   m_RootOrder: 0
@@ -3455,10 +3565,26 @@ MonoBehaviour:
   - StateKey: base
     dialogStatements:
     - statement: ohai there.
-      dialogAnim: {fileID: 0}
     - statement: It'd be really cool if the whole <b>Dialogue Manager</b> decided
         to work the way I wanted...
-      dialogAnim: {fileID: 0}
+    dialogueActions:
+    - text: Done
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1290051032}
+            m_MethodName: HideDialogue
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
 --- !u!58 &1598668168
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3936,8 +4062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPickup: 0
-  requiredObjects:
-  - {fileID: 527287640}
+  requiredObjects: []
   interactionSounds: []
   interactionSuccessTriggers:
     m_PersistentCalls:
@@ -3948,17 +4073,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 865308947}
-        m_MethodName: AddItem
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1663912937}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3986,11 +4100,87 @@ MonoBehaviour:
   dQueues:
   - StateKey: base
     dialogStatements:
-    - statement: ohai there.
-      dialogAnim: {fileID: 0}
-    - statement: It'd be really cool if the whole <b>Dialogue Manager</b> decided
-        to work the way I wanted...
-      dialogAnim: {fileID: 0}
+    - statement: hello there, my name is adrian
+    - statement: Man, I lost my stuf. Can you find it?
+    dialogueActions:
+    - text: Done
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1290051032}
+            m_MethodName: HideDialogue
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+  - StateKey: hint
+    dialogStatements: []
+    dialogueActions:
+    - text: Done
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1290051032}
+            m_MethodName: HideDialogue
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+  - StateKey: turnin
+    dialogStatements:
+    - statement: hey do you have that thing for me?
+    dialogueActions:
+    - text: Done
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1290051032}
+            m_MethodName: HideDialogue
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+  - StateKey: done
+    dialogStatements: []
+    dialogueActions:
+    - text: Done
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1290051032}
+            m_MethodName: HideDialogue
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
 --- !u!58 &1657589467
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4120,7 +4310,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1654880976114704, guid: 19184e72d5b0b9647accb404b02dd183, type: 2}
       propertyPath: m_Name
-      value: RememberNote
+      value: MemoriesNote
       objectReference: {fileID: 0}
     - target: {fileID: 4296369242822364, guid: 19184e72d5b0b9647accb404b02dd183, type: 2}
       propertyPath: m_LocalScale.z
@@ -4162,11 +4352,6 @@ Prefab:
 --- !u!4 &1663912936 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4296369242822364, guid: 19184e72d5b0b9647accb404b02dd183,
-    type: 2}
-  m_PrefabInternal: {fileID: 1663912935}
---- !u!1 &1663912937 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1654880976114704, guid: 19184e72d5b0b9647accb404b02dd183,
     type: 2}
   m_PrefabInternal: {fileID: 1663912935}
 --- !u!1001 &1693543058
@@ -4489,7 +4674,7 @@ Prefab:
     - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
         type: 2}
       propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4296369242822364, guid: 19184e72d5b0b9647accb404b02dd183, type: 2}
       propertyPath: m_LocalPosition.x
@@ -4604,7 +4789,7 @@ Prefab:
     - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
         type: 2}
       propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
         type: 2}
@@ -4635,6 +4820,26 @@ Prefab:
       propertyPath: m_Size.y
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1657589466}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetDialogState
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: turnin
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19184e72d5b0b9647accb404b02dd183, type: 2}
   m_IsPrefabParent: 0
@@ -4657,7 +4862,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4345930879777436, guid: ee4de2966f9bad140b8eb1c498fd9057, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -11.32
+      value: 89.1
       objectReference: {fileID: 0}
     - target: {fileID: 4345930879777436, guid: ee4de2966f9bad140b8eb1c498fd9057, type: 2}
       propertyPath: m_LocalPosition.y

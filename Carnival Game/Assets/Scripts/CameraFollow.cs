@@ -25,7 +25,7 @@ public class CameraFollow : MonoBehaviour {
         followCam = Camera.main;
 
         // Set initial camera position
-        followCam.transform.position.Set(transform.position.x + offsetX, 
+        followCam.transform.position = new Vector3(transform.position.x + offsetX, 
             transform.position.y + offsetY, followCam.transform.position.z);
 	}
 	

@@ -14,6 +14,11 @@ public class DialogueManager : MonoBehaviour {
     // Text that will be inside the dialog box.
     public Text dialogueText;
 
+    public GameObject buttonPrefab;
+
+    // The buttons for each dialogue action
+    private List<Button> dialogueActionsText;
+
     // Reference to player 
     public PlayerController pController;
 
@@ -30,7 +35,7 @@ public class DialogueManager : MonoBehaviour {
     private bool goingToPlay = false;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
         // Make sure there is only one instance 
 		if(Instance == null)
         {
@@ -43,6 +48,8 @@ public class DialogueManager : MonoBehaviour {
 
         // Disable the Canvas on start
         dialogueCanvas.enabled = false;
+
+        dialogueActionsText = new List<Button>();
 	}
 
     public void SetDialogSequence(Dialogue.DialogueList sequence)
@@ -58,8 +65,32 @@ public class DialogueManager : MonoBehaviour {
         statementIndex = 0;
         dialogueText.text = currentConversation.dialogStatements[0].statement;
 
+        foreach (Button b in dialogueActionsText)
+        {
+            Destroy(b.gameObject);
+        }
+
+        dialogueActionsText.Clear();
+
+        foreach(Dialogue.DialogueAction dAction in currentConversation.dialogueActions)
+        {
+            GameObject actionButton = Instantiate(buttonPrefab);
+            Button button = actionButton.GetComponent<Button>();
+            dialogueActionsText.Add(button);
+            button.onClick.AddListener(dAction.action.Invoke);
+            button.GetComponentInChildren<Text>().text = dAction.text;
+        }
+
         // disable player controls while dialogue is happening
         pController.enabled = false;
+    }
+
+    public void HideDialogue()
+    {
+        isPlaying = false;
+        goingToPlay = false;
+        dialogueCanvas.enabled = false;
+        pController.enabled = true;
     }
 
 	// Update is called once per frame
@@ -67,23 +98,18 @@ public class DialogueManager : MonoBehaviour {
 
 		if(isPlaying && Input.GetButtonDown("Interact"))
         {
-            statementIndex++;
-            Debug.Log("incrementnign statement");
-
-            // Did we reach the end of the dialogue?
-            if (statementIndex >= currentConversation.dialogStatements.Count)
+            if(statementIndex < currentConversation.dialogStatements.Count - 1)
             {
-                isPlaying = false;
-                goingToPlay = false;
-                dialogueCanvas.enabled = false;
-                pController.enabled = true;
-                Debug.Log("I should be invoking crap now.");
-                currentConversation.dialogueAction.Invoke();
-            }
-            else
-            {
+                statementIndex++;
                 dialogueText.text = currentConversation.dialogStatements[statementIndex].statement;
             }
+
+            // We are on the last dialogue frame
+            if (statementIndex == currentConversation.dialogStatements.Count - 1)
+            {
+                dialogueActionsText.ForEach((Button button) => button.gameObject.transform.SetParent(GameObject.Find("ActionPanel").transform));
+            }
+
         }
         else if (goingToPlay && !isPlaying)
         {
