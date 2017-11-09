@@ -30,7 +30,21 @@ public class Dialogue : MonoBehaviour {
     {
         public string StateKey;
         public List<DialogueStatement> dialogStatements;
-        public UnityEvent dialogueAction;
+        public List<DialogueAction> dialogueActions;
+    }
+
+    [Serializable]
+    public class DialogueAction
+    {
+        public string text;
+        public UnityEvent action;
+
+        public DialogueAction(string text, UnityAction dAction)
+        {
+            this.text = text;
+            this.action = new UnityEvent();
+            action.AddListener(dAction);
+        }
     }
 
     // This is used for the player to put dialog stuff into.
@@ -48,10 +62,12 @@ public class Dialogue : MonoBehaviour {
         dialogTrees = new Dictionary<string, DialogueList>();
 
         // populate it with the list of stuff the user made.
-        for(int i = 0; i < dQueues.Length; i++)
+        foreach(DialogueList dlist in dQueues)
         {
-            dialogTrees.Add(dQueues[i].StateKey, dQueues[i]);
+            // dlist.dialogueActions.Add(new DialogueAction("Cancel", DialogueManager.Instance.HideDialogue));
+            dialogTrees.Add(dlist.StateKey, dlist);
         }
+
 
     }
 
