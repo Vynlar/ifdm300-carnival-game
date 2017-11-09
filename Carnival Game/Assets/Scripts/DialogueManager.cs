@@ -98,17 +98,19 @@ public class DialogueManager : MonoBehaviour {
 
 		if(isPlaying && Input.GetButtonDown("Interact"))
         {
-            // We are on the last dialogue frame
-            if (statementIndex == currentConversation.dialogStatements.Count - 1)
-            {
-                Debug.Log(dialogueActionsText.Count);
-                dialogueActionsText.ForEach((Button button) => button.transform.SetParent(GameObject.Find("ActionPanel").transform));
-            }
-            else
+            if(statementIndex < currentConversation.dialogStatements.Count - 1)
             {
                 statementIndex++;
                 dialogueText.text = currentConversation.dialogStatements[statementIndex].statement;
             }
+
+            // We are on the last dialogue frame
+            if (statementIndex == currentConversation.dialogStatements.Count - 1)
+            {
+                Debug.Log(dialogueActionsText.Count);
+                dialogueActionsText.ForEach((Button button) => button.gameObject.transform.SetParent(GameObject.Find("ActionPanel").transform));
+            }
+
         }
         else if (goingToPlay && !isPlaying)
         {
