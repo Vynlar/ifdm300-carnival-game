@@ -21,10 +21,12 @@ public class DialogueManager : MonoBehaviour {
     public float playSpeed;
 
     // Text conversation to play
-    private List<Dialogue.DialogueStatement> currentConversation;
+    private Dialogue.DialogueList currentConversation;
 
     private int statementIndex = 0;
     private bool isPlaying = false;
+
+    // separate dialogue input from interaction input by one frame...
     private bool goingToPlay = false;
 
 	// Use this for initialization
@@ -43,7 +45,7 @@ public class DialogueManager : MonoBehaviour {
         dialogueCanvas.enabled = false;
 	}
 
-    public void SetDialogSequence(List<Dialogue.DialogueStatement> sequence)
+    public void SetDialogSequence(Dialogue.DialogueList sequence)
     {
         statementIndex = 0;
         currentConversation = sequence;
@@ -52,10 +54,9 @@ public class DialogueManager : MonoBehaviour {
     public void ActivateDialog()
     {
         dialogueCanvas.enabled = true;
-        //isPlaying = true;
         goingToPlay = true;
         statementIndex = 0;
-        dialogueText.text = currentConversation[0].statement;
+        dialogueText.text = currentConversation.dialogStatements[0].statement;
 
         // disable player controls while dialogue is happening
         pController.enabled = false;
@@ -67,18 +68,21 @@ public class DialogueManager : MonoBehaviour {
 		if(isPlaying && Input.GetButtonDown("Interact"))
         {
             statementIndex++;
+            Debug.Log("incrementnign statement");
 
             // Did we reach the end of the dialogue?
-            if(statementIndex >= currentConversation.Count)
+            if (statementIndex >= currentConversation.dialogStatements.Count)
             {
                 isPlaying = false;
                 goingToPlay = false;
                 dialogueCanvas.enabled = false;
                 pController.enabled = true;
+                Debug.Log("I should be invoking crap now.");
+                currentConversation.dialogueAction.Invoke();
             }
             else
             {
-                dialogueText.text = currentConversation[statementIndex].statement;
+                dialogueText.text = currentConversation.dialogStatements[statementIndex].statement;
             }
         }
         else if (goingToPlay && !isPlaying)
