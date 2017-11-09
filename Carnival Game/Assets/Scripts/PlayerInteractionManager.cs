@@ -13,6 +13,13 @@ public class PlayerInteractionManager : MonoBehaviour {
     // Collider to use for interaction triggers
     public Collider2D interactionCollider;
 
+    // Color to use when highlighting objects
+    public Color itemHighlightColor;
+
+    // Material for the sprite to go back to after it's
+    // no longer being highlighted.
+    public Material defaultSpriteMaterial;
+
     // Inventory component of player
     private Inventory playerInventory;
 
@@ -32,6 +39,7 @@ public class PlayerInteractionManager : MonoBehaviour {
 
     private void UpdateFocusedObject()
     {
+        GameObject prevFocusedObject = focusedObject;
         focusedObject = null;
 
         // Compare distances and focus on the closest interactable
@@ -47,6 +55,19 @@ public class PlayerInteractionManager : MonoBehaviour {
             }
         }
 
+        if(focusedObject != prevFocusedObject)
+        {
+            if(focusedObject != null)
+            {
+                SpriteGlow.SpriteGlow sGlow = focusedObject.AddComponent<SpriteGlow.SpriteGlow>();
+                sGlow.GlowColor = itemHighlightColor;
+            }
+            if(prevFocusedObject != null)
+            {
+                prevFocusedObject.GetComponent<SpriteRenderer>().material = defaultSpriteMaterial;
+                Destroy(prevFocusedObject.GetComponent<SpriteGlow.SpriteGlow>());
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
