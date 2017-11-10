@@ -674,7 +674,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 403934158}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 132.71098, y: -70.59097, z: 0.28894457}
+  m_LocalPosition: {x: 351.07233, y: 51.766716, z: 0.28894457}
   m_LocalScale: {x: 1.8824253, y: 1.882426, z: 1.882426}
   m_Children:
   - {fileID: 606485796}
@@ -1165,7 +1165,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 606485795}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 103.800026, z: 0}
+  m_LocalPosition: {x: 0.000030517578, y: 136.30002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1122093262}
@@ -1543,7 +1543,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 703337474}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -60.500004, z: 0}
+  m_LocalPosition: {x: 0, y: -60.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 606485796}
@@ -2589,7 +2589,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1122093261}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -232.15501, y: 56.969994, z: 0}
+  m_LocalPosition: {x: -305.23502, y: 74.51998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 606485796}
@@ -3302,7 +3302,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1444232749}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 132.71098, y: -70.59097, z: 0.28894457}
+  m_LocalPosition: {x: 351.07233, y: 51.766716, z: 0.28894457}
   m_LocalScale: {x: 1.8824253, y: 1.882426, z: 1.882426}
   m_Children: []
   m_Father: {fileID: 558855357}
@@ -4142,7 +4142,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
   - StateKey: turnin
     dialogStatements:
-    - statement: hey do you have that thing for me?
+    - statement: Hey, did you have that <b>object</b> that I need? I need to tell
+        the future here.
     dialogueActions:
     - text: Done
       action:
@@ -4161,8 +4162,48 @@ MonoBehaviour:
             m_CallState: 2
         m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
+    - text: Give Crystal Ball
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1657589466}
+            m_MethodName: SetDialogState
+            m_Mode: 5
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: done
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 865308947}
+            m_MethodName: RemoveItem
+            m_Mode: 2
+            m_Arguments:
+              m_ObjectArgument: {fileID: 527287640}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 1657589466}
+            m_MethodName: TriggerDialog
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
   - StateKey: done
-    dialogStatements: []
+    dialogStatements:
+    - statement: Wow, thanks boi. You done heckin' did it.
     dialogueActions:
     - text: Done
       action:
@@ -4862,11 +4903,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4345930879777436, guid: ee4de2966f9bad140b8eb1c498fd9057, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 89.1
+      value: 85.6
       objectReference: {fileID: 0}
     - target: {fileID: 4345930879777436, guid: ee4de2966f9bad140b8eb1c498fd9057, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -56.76586
+      value: -57.05
       objectReference: {fileID: 0}
     - target: {fileID: 4345930879777436, guid: ee4de2966f9bad140b8eb1c498fd9057, type: 2}
       propertyPath: m_LocalPosition.z

@@ -22,17 +22,20 @@ public class DialogueManager : MonoBehaviour {
     // Reference to player 
     public PlayerController pController;
 
-    // Speed at which characters are displayed for dialogue
-    public float playSpeed;
-
     // Text conversation to play
     private Dialogue.DialogueList currentConversation;
 
+    // Current string index we are using
     private int statementIndex = 0;
+
+    // Whether the dialogue window is being displayed
     private bool isPlaying = false;
 
     // separate dialogue input from interaction input by one frame...
     private bool goingToPlay = false;
+
+    // is the dialogue text still rolling? 
+    private bool isRolling = false;
 
 	// Use this for initialization
 	void Awake () {
@@ -52,6 +55,40 @@ public class DialogueManager : MonoBehaviour {
         dialogueActionsText = new List<Button>();
 	}
 
+    // Update is called once per frame
+    void Update()
+    {
+
+        if (isPlaying && Input.GetButtonDown("Interact"))
+        {
+            if(isRolling)
+            {
+                StopAllCoroutines();
+                isRolling = false;
+                dialogueText.text = currentConversation.dialogStatements[statementIndex].statement;
+                return;
+            }
+            if (statementIndex < currentConversation.dialogStatements.Count - 1)
+            {
+                statementIndex++;
+                StopAllCoroutines();
+                StartCoroutine(RollDialog());
+                //dialogueText.text = currentConversation.dialogStatements[statementIndex].statement;
+            }
+
+            // We are on the last dialogue frame
+            if (statementIndex == currentConversation.dialogStatements.Count - 1)
+            {
+                dialogueActionsText.ForEach((Button button) => button.gameObject.transform.SetParent(GameObject.Find("ActionPanel").transform));
+            }
+
+        }
+        else if (goingToPlay && !isPlaying)
+        {
+            isPlaying = true;
+        }
+    }
+
     public void SetDialogSequence(Dialogue.DialogueList sequence)
     {
         statementIndex = 0;
@@ -63,7 +100,9 @@ public class DialogueManager : MonoBehaviour {
         dialogueCanvas.enabled = true;
         goingToPlay = true;
         statementIndex = 0;
-        dialogueText.text = currentConversation.dialogStatements[0].statement;
+        StopAllCoroutines();
+        StartCoroutine(RollDialog());
+        //dialogueText.text = currentConversation.dialogStatements[0].statement;
 
         foreach (Button b in dialogueActionsText)
         {
@@ -91,6 +130,17 @@ public class DialogueManager : MonoBehaviour {
                 button.gameObject.transform.SetParent(GameObject.Find("ActionPanel").transform));
         }
     }
+    IEnumerator RollDialog()
+    {
+        dialogueText.text = "";
+        isRolling = true;
+        foreach(char letter in currentConversation.dialogStatements[statementIndex].statement.ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return null;
+        }
+         isRolling = false;
+    }
 
     public void HideDialogue()
     {
@@ -99,29 +149,5 @@ public class DialogueManager : MonoBehaviour {
         dialogueCanvas.enabled = false;
         pController.enabled = true;
     }
-
-	// Update is called once per frame
-	void Update () {
-
-		if(isPlaying && Input.GetButtonDown("Interact"))
-        {
-            if(statementIndex < currentConversation.dialogStatements.Count - 1)
-            {
-                statementIndex++;
-                dialogueText.text = currentConversation.dialogStatements[statementIndex].statement;
-            }
-
-            // We are on the last dialogue frame
-            if (statementIndex == currentConversation.dialogStatements.Count - 1)
-            {
-                dialogueActionsText.ForEach((Button button) => button.gameObject.transform.SetParent(GameObject.Find("ActionPanel").transform));
-            }
-
-        }
-        else if (goingToPlay && !isPlaying)
-        {
-            isPlaying = true;
-        }
-	}
 
 }
