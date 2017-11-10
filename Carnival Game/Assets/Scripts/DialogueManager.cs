@@ -61,6 +61,8 @@ public class DialogueManager : MonoBehaviour {
 
         if (isPlaying && Input.GetButtonDown("Interact"))
         {
+
+            // Finish up showing dialogue and return
             if(isRolling)
             {
                 StopAllCoroutines();
@@ -73,7 +75,6 @@ public class DialogueManager : MonoBehaviour {
                 statementIndex++;
                 StopAllCoroutines();
                 StartCoroutine(RollDialog());
-                //dialogueText.text = currentConversation.dialogStatements[statementIndex].statement;
             }
 
             // We are on the last dialogue frame

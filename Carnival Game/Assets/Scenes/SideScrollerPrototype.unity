@@ -3060,7 +3060,6 @@ MonoBehaviour:
   buttonPrefab: {fileID: 1125612737880852, guid: 274f4ff52c55b854cbc63606ed2c3759,
     type: 2}
   pController: {fileID: 865308951}
-  playSpeed: 1
 --- !u!4 &1290051033
 Transform:
   m_ObjectHideFlags: 0
@@ -4100,9 +4099,87 @@ MonoBehaviour:
   dQueues:
   - StateKey: base
     dialogStatements:
-    - statement: hello there, my name is adrian
-    - statement: Man, I lost my stuf. Can you find it?
+    - statement: 'I''m the fortune teller! '
+    - statement: Man, I lost my stuff. Can you find it?
     dialogueActions:
+    - text: Yes
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1290051032}
+            m_MethodName: HideDialogue
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 1657589466}
+            m_MethodName: SetDialogState
+            m_Mode: 5
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: sayyesatbase
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 1657589466}
+            m_MethodName: TriggerDialog
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+    - text: No
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1290051032}
+            m_MethodName: HideDialogue
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 1657589466}
+            m_MethodName: SetDialogState
+            m_Mode: 5
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: saynoatbase
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 1657589466}
+            m_MethodName: TriggerDialog
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
     - text: Done
       action:
         m_PersistentCalls:
@@ -4121,7 +4198,9 @@ MonoBehaviour:
         m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
   - StateKey: hint
-    dialogStatements: []
+    dialogStatements:
+    - statement: Man, what am I gonna do without my super cool gambling stuff? I need
+        to gamble man... I need to!
     dialogueActions:
     - text: Done
       action:
@@ -4142,26 +4221,9 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
   - StateKey: turnin
     dialogStatements:
-    - statement: Hey, did you have that <b>object</b> that I need? I need to tell
-        the future here.
+    - statement: Hey, did you have that object that I need? I need to tell the future
+        here.
     dialogueActions:
-    - text: Done
-      action:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 1290051032}
-            m_MethodName: HideDialogue
-            m_Mode: 1
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: 
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
     - text: Give Crystal Ball
       action:
         m_PersistentCalls:
@@ -4201,6 +4263,23 @@ MonoBehaviour:
             m_CallState: 2
         m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
+    - text: Done
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1290051032}
+            m_MethodName: HideDialogue
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
   - StateKey: done
     dialogStatements:
     - statement: Wow, thanks boi. You done heckin' did it.
@@ -4218,6 +4297,71 @@ MonoBehaviour:
               m_IntArgument: 0
               m_FloatArgument: 0
               m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+  - StateKey: saynoatbase
+    dialogStatements:
+    - statement: Aw... well, I still believe it! you can't change what I think yo!
+    dialogueActions:
+    - text: Done
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1290051032}
+            m_MethodName: HideDialogue
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 1657589466}
+            m_MethodName: SetDialogState
+            m_Mode: 5
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: hint
+              m_BoolArgument: 0
+            m_CallState: 2
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+  - StateKey: sayyesatbase
+    dialogStatements:
+    - statement: Well, I'm glad you think so.... that's something I've always wanted
+        to say, but never had the courage to do so...
+    dialogueActions:
+    - text: Done
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1290051032}
+            m_MethodName: HideDialogue
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 1657589466}
+            m_MethodName: SetDialogState
+            m_Mode: 5
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: hint
               m_BoolArgument: 0
             m_CallState: 2
         m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -4956,7 +5100,7 @@ Prefab:
     - target: {fileID: 114875297823851988, guid: ee4de2966f9bad140b8eb1c498fd9057,
         type: 2}
       propertyPath: offsetY
-      value: 1.68
+      value: 3.8
       objectReference: {fileID: 0}
     - target: {fileID: 50576724369356926, guid: ee4de2966f9bad140b8eb1c498fd9057,
         type: 2}
