@@ -31,21 +31,37 @@ public class AddDialogDefaults : ScriptableObject {
             foreach (Dialogue.DialogueList dList in dLog.dQueues)
             {
                 bool foundDone = false;
+                Dialogue.DialogueAction newAction = null;
                 foreach (Dialogue.DialogueAction dAction in dList.dialogueActions)
                 {
                     if(dAction.text == "Done")
                     {
-                        foundDone = true;
-                        break;
+                        if(dAction != dList.dialogueActions[dList.dialogueActions.Count - 1])
+                        {
+                            if(newAction == null)
+                            {
+                                newAction = dAction;
+                            }
+                            dList.dialogueActions.Remove(dAction);
+                        }
+                        else if (dAction == dList.dialogueActions[dList.dialogueActions.Count - 1])
+                        {
+                            foundDone = true;
+                        }
                     }
                 }
                 if(!foundDone)
                 {
-                    Dialogue.DialogueAction action = new Dialogue.DialogueAction("Done", new UnityAction(dManager.HideDialogue));
-                    //action.action
-
-                    UnityEditor.Events.UnityEventTools.AddVoidPersistentListener(action.action, dManager.HideDialogue);
-                    dList.dialogueActions.Add(action);
+                    if (newAction != null)
+                    {
+                        dList.dialogueActions.Add(newAction);
+                    }
+                    else
+                    {
+                        Dialogue.DialogueAction action = new Dialogue.DialogueAction("Done", new UnityAction(dManager.HideDialogue));
+                        UnityEditor.Events.UnityEventTools.AddVoidPersistentListener(action.action, dManager.HideDialogue);
+                        dList.dialogueActions.Add(action);
+                    }
                 }
             }
         }

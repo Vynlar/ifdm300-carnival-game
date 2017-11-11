@@ -14,23 +14,31 @@ public class Inventory : MonoBehaviour {
 
     public void AddItem(GameObject item)
     {
+        if(inventory.Contains(item))
+        {
+            Debug.Log("player already has item in inventory");
+            return;
+        }
+
         item.GetComponent<SpriteRenderer>().enabled = false;
         item.GetComponent<InteractionObject>().SetInteractable(false);
         inventory.Add(item);
+
+        InventoryUI.Instance.AddItem(item);
     }
 
     public void RemoveItem(GameObject item)
     {
         inventory.Remove(item);
+        InventoryUI.Instance.RemoveItem(item);
     }
 
     public bool CheckIfContainsRequiredItems(GameObject[] requiredObjs)
     {
-        //Debug.Log("requiredObj size: " + requiredObjs.Length);
+
         // No objects are required
         if (requiredObjs.Length == 0)
         {
-            //Debug.Log("No items required");
             return true;
         }
 

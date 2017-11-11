@@ -9,7 +9,7 @@ public class DialogueManager : MonoBehaviour {
     public static DialogueManager Instance;
 
     // Canvas that holds the dialogue elements
-    public Canvas dialogueCanvas;
+    public GameObject dialoguePanel;
 
     // Text that will be inside the dialog box.
     public Text dialogueText;
@@ -22,17 +22,20 @@ public class DialogueManager : MonoBehaviour {
     // Reference to player 
     public PlayerController pController;
 
-    // Speed at which characters are displayed for dialogue
-    public float playSpeed;
-
     // Text conversation to play
     private Dialogue.DialogueList currentConversation;
 
+    // Current string index we are using
     private int statementIndex = 0;
+
+    // Whether the dialogue window is being displayed
     private bool isPlaying = false;
 
     // separate dialogue input from interaction input by one frame...
     private bool goingToPlay = false;
+
+    // is the dialogue text still rolling? 
+    private bool isRolling = false;
 
 	// Use this for initialization
 	void Awake () {
@@ -47,10 +50,45 @@ public class DialogueManager : MonoBehaviour {
         }
 
         // Disable the Canvas on start
-        dialogueCanvas.enabled = false;
+        dialoguePanel.SetActive(false);
 
         dialogueActionsText = new List<Button>();
 	}
+
+    // Update is called once per frame
+    void Update()
+    {
+
+        if (isPlaying && Input.GetButtonDown("Interact"))
+        {
+
+            // Finish up showing dialogue and return
+            if(isRolling)
+            {
+                StopAllCoroutines();
+                isRolling = false;
+                dialogueText.text = currentConversation.dialogStatements[statementIndex].statement;
+
+                // We are on the last dialogue frame
+                if (statementIndex == currentConversation.dialogStatements.Count - 1)
+                {
+                    dialogueActionsText.ForEach((Button button) => button.gameObject.transform.SetParent(GameObject.Find("ActionPanel").transform));
+                }
+                return;
+            }
+            if (statementIndex < currentConversation.dialogStatements.Count - 1)
+            {
+                statementIndex++;
+                StopAllCoroutines();
+                StartCoroutine(RollDialog());
+            }
+
+        }
+        else if (goingToPlay && !isPlaying)
+        {
+            isPlaying = true;
+        }
+    }
 
     public void SetDialogSequence(Dialogue.DialogueList sequence)
     {
@@ -60,10 +98,11 @@ public class DialogueManager : MonoBehaviour {
 
     public void ActivateDialog()
     {
-        dialogueCanvas.enabled = true;
+        dialoguePanel.SetActive(true);
         goingToPlay = true;
         statementIndex = 0;
-        dialogueText.text = currentConversation.dialogStatements[0].statement;
+        StopAllCoroutines();
+        StartCoroutine(RollDialog());
 
         foreach (Button b in dialogueActionsText)
         {
@@ -85,10 +124,26 @@ public class DialogueManager : MonoBehaviour {
         pController.enabled = false;
 
         // Check if we're alraedy at the end (dialogue count is only one
-        if (statementIndex == currentConversation.dialogStatements.Count - 1)
+        if (statementIndex == currentConversation.dialogStatements.Count - 1 && !isRolling)
         {
             dialogueActionsText.ForEach((Button button) => 
                 button.gameObject.transform.SetParent(GameObject.Find("ActionPanel").transform));
+        }
+    }
+    IEnumerator RollDialog()
+    {
+        dialogueText.text = "";
+        isRolling = true;
+        foreach(char letter in currentConversation.dialogStatements[statementIndex].statement.ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return null;
+        }
+         isRolling = false;
+        // We are on the last dialogue frame
+        if (statementIndex == currentConversation.dialogStatements.Count - 1)
+        {
+            dialogueActionsText.ForEach((Button button) => button.gameObject.transform.SetParent(GameObject.Find("ActionPanel").transform));
         }
     }
 
@@ -96,32 +151,8 @@ public class DialogueManager : MonoBehaviour {
     {
         isPlaying = false;
         goingToPlay = false;
-        dialogueCanvas.enabled = false;
+        dialoguePanel.SetActive(false);
         pController.enabled = true;
     }
-
-	// Update is called once per frame
-	void Update () {
-
-		if(isPlaying && Input.GetButtonDown("Interact"))
-        {
-            if(statementIndex < currentConversation.dialogStatements.Count - 1)
-            {
-                statementIndex++;
-                dialogueText.text = currentConversation.dialogStatements[statementIndex].statement;
-            }
-
-            // We are on the last dialogue frame
-            if (statementIndex == currentConversation.dialogStatements.Count - 1)
-            {
-                dialogueActionsText.ForEach((Button button) => button.gameObject.transform.SetParent(GameObject.Find("ActionPanel").transform));
-            }
-
-        }
-        else if (goingToPlay && !isPlaying)
-        {
-            isPlaying = true;
-        }
-	}
 
 }
