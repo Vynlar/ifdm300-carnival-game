@@ -68,6 +68,12 @@ public class DialogueManager : MonoBehaviour {
                 StopAllCoroutines();
                 isRolling = false;
                 dialogueText.text = currentConversation.dialogStatements[statementIndex].statement;
+
+                // We are on the last dialogue frame
+                if (statementIndex == currentConversation.dialogStatements.Count - 1)
+                {
+                    dialogueActionsText.ForEach((Button button) => button.gameObject.transform.SetParent(GameObject.Find("ActionPanel").transform));
+                }
                 return;
             }
             if (statementIndex < currentConversation.dialogStatements.Count - 1)
@@ -75,12 +81,6 @@ public class DialogueManager : MonoBehaviour {
                 statementIndex++;
                 StopAllCoroutines();
                 StartCoroutine(RollDialog());
-            }
-
-            // We are on the last dialogue frame
-            if (statementIndex == currentConversation.dialogStatements.Count - 1)
-            {
-                dialogueActionsText.ForEach((Button button) => button.gameObject.transform.SetParent(GameObject.Find("ActionPanel").transform));
             }
 
         }
@@ -103,7 +103,6 @@ public class DialogueManager : MonoBehaviour {
         statementIndex = 0;
         StopAllCoroutines();
         StartCoroutine(RollDialog());
-        //dialogueText.text = currentConversation.dialogStatements[0].statement;
 
         foreach (Button b in dialogueActionsText)
         {
@@ -125,7 +124,7 @@ public class DialogueManager : MonoBehaviour {
         pController.enabled = false;
 
         // Check if we're alraedy at the end (dialogue count is only one
-        if (statementIndex == currentConversation.dialogStatements.Count - 1)
+        if (statementIndex == currentConversation.dialogStatements.Count - 1 && !isRolling)
         {
             dialogueActionsText.ForEach((Button button) => 
                 button.gameObject.transform.SetParent(GameObject.Find("ActionPanel").transform));
@@ -141,6 +140,11 @@ public class DialogueManager : MonoBehaviour {
             yield return null;
         }
          isRolling = false;
+        // We are on the last dialogue frame
+        if (statementIndex == currentConversation.dialogStatements.Count - 1)
+        {
+            dialogueActionsText.ForEach((Button button) => button.gameObject.transform.SetParent(GameObject.Find("ActionPanel").transform));
+        }
     }
 
     public void HideDialogue()
