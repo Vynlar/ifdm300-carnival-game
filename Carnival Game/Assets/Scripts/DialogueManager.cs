@@ -9,7 +9,7 @@ public class DialogueManager : MonoBehaviour {
     public static DialogueManager Instance;
 
     // Canvas that holds the dialogue elements
-    public Canvas dialogueCanvas;
+    public GameObject dialoguePanel;
 
     // Text that will be inside the dialog box.
     public Text dialogueText;
@@ -50,7 +50,7 @@ public class DialogueManager : MonoBehaviour {
         }
 
         // Disable the Canvas on start
-        dialogueCanvas.enabled = false;
+        dialoguePanel.SetActive(false);
 
         dialogueActionsText = new List<Button>();
 	}
@@ -98,7 +98,7 @@ public class DialogueManager : MonoBehaviour {
 
     public void ActivateDialog()
     {
-        dialogueCanvas.enabled = true;
+        dialoguePanel.SetActive(true);
         goingToPlay = true;
         statementIndex = 0;
         StopAllCoroutines();
@@ -151,7 +151,7 @@ public class DialogueManager : MonoBehaviour {
     {
         isPlaying = false;
         goingToPlay = false;
-        dialogueCanvas.enabled = false;
+        dialoguePanel.SetActive(false);
         pController.enabled = true;
     }
 

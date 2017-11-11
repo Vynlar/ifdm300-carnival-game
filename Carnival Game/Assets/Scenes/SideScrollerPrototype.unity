@@ -600,7 +600,7 @@ GameObject:
   - component: {fileID: 403934160}
   - component: {fileID: 403934159}
   m_Layer: 5
-  m_Name: DialogueUI
+  m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3055,7 +3055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 683225ad389fb574c9007ceb98629f18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueCanvas: {fileID: 403934161}
+  dialoguePanel: {fileID: 606485795}
   dialogueText: {fileID: 1122093263}
   buttonPrefab: {fileID: 1125612737880852, guid: 274f4ff52c55b854cbc63606ed2c3759,
     type: 2}
