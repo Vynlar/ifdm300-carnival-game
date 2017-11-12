@@ -14,13 +14,19 @@ public class DialogueManager : MonoBehaviour {
     // Text that will be inside the dialog box.
     public Text dialogueText;
 
+    // Characters displayed per second
+    public float playSpeed = 10;
+
+    // Prefab to use for action buttons
     public GameObject buttonPrefab;
+
+    // Reference to player 
+    public PlayerController pController;
+
 
     // The buttons for each dialogue action
     private List<Button> dialogueActionsText;
 
-    // Reference to player 
-    public PlayerController pController;
 
     // Text conversation to play
     private Dialogue.DialogueList currentConversation;
@@ -72,7 +78,12 @@ public class DialogueManager : MonoBehaviour {
                 // We are on the last dialogue frame
                 if (statementIndex == currentConversation.dialogStatements.Count - 1)
                 {
-                    dialogueActionsText.ForEach((Button button) => button.gameObject.transform.SetParent(GameObject.Find("ActionPanel").transform));
+                    foreach (Button button in dialogueActionsText)
+                    {
+                        button.gameObject.transform.SetParent(GameObject.Find("ActionPanel").transform, false);
+                        button.gameObject.transform.localScale = new Vector3(1, 1, 1);
+                        Debug.Log("Local scale: " + button.gameObject.transform.localScale + "LossyScale " + button.gameObject.transform.lossyScale);
+                    }
                 }
                 return;
             }
@@ -123,11 +134,16 @@ public class DialogueManager : MonoBehaviour {
         // disable player controls while dialogue is happening
         pController.enabled = false;
 
-        // Check if we're alraedy at the end (dialogue count is only one
+        // Check if we're alraedy at the end (dialogue count is only one)
         if (statementIndex == currentConversation.dialogStatements.Count - 1 && !isRolling)
         {
-            dialogueActionsText.ForEach((Button button) => 
-                button.gameObject.transform.SetParent(GameObject.Find("ActionPanel").transform));
+            foreach (Button button in dialogueActionsText)
+            {
+                button.gameObject.transform.SetParent(GameObject.Find("ActionPanel").transform, false);
+                button.gameObject.transform.localScale = new Vector3(0, 0, 0);
+                Debug.Log("Local scale: " + button.gameObject.transform.localScale + "LossyScale " + button.gameObject.transform.lossyScale);
+            }
+
         }
     }
     IEnumerator RollDialog()
@@ -137,13 +153,19 @@ public class DialogueManager : MonoBehaviour {
         foreach(char letter in currentConversation.dialogStatements[statementIndex].statement.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return null;
+            yield return new WaitForSecondsRealtime(1 / playSpeed);
         }
          isRolling = false;
+
         // We are on the last dialogue frame
         if (statementIndex == currentConversation.dialogStatements.Count - 1)
         {
-            dialogueActionsText.ForEach((Button button) => button.gameObject.transform.SetParent(GameObject.Find("ActionPanel").transform));
+            foreach (Button button in dialogueActionsText)
+            {
+                button.gameObject.transform.SetParent(GameObject.Find("ActionPanel").transform, false);
+                button.gameObject.transform.localScale = new Vector3(1, 1, 1);
+                Debug.Log("Local scale: " + button.gameObject.transform.localScale + "LossyScale " + button.gameObject.transform.lossyScale);
+            }
         }
     }
 
