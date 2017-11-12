@@ -82,7 +82,6 @@ public class DialogueManager : MonoBehaviour {
                     {
                         button.gameObject.transform.SetParent(GameObject.Find("ActionPanel").transform, false);
                         button.gameObject.transform.localScale = new Vector3(1, 1, 1);
-                        Debug.Log("Local scale: " + button.gameObject.transform.localScale + "LossyScale " + button.gameObject.transform.lossyScale);
                     }
                 }
                 return;
@@ -141,7 +140,6 @@ public class DialogueManager : MonoBehaviour {
             {
                 button.gameObject.transform.SetParent(GameObject.Find("ActionPanel").transform, false);
                 button.gameObject.transform.localScale = new Vector3(0, 0, 0);
-                Debug.Log("Local scale: " + button.gameObject.transform.localScale + "LossyScale " + button.gameObject.transform.lossyScale);
             }
 
         }
@@ -164,7 +162,6 @@ public class DialogueManager : MonoBehaviour {
             {
                 button.gameObject.transform.SetParent(GameObject.Find("ActionPanel").transform, false);
                 button.gameObject.transform.localScale = new Vector3(1, 1, 1);
-                Debug.Log("Local scale: " + button.gameObject.transform.localScale + "LossyScale " + button.gameObject.transform.lossyScale);
             }
         }
     }

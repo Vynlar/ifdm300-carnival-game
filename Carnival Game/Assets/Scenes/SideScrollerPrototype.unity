@@ -330,6 +330,60 @@ GameObject:
   m_PrefabParentObject: {fileID: 1654880976114704, guid: 19184e72d5b0b9647accb404b02dd183,
     type: 2}
   m_PrefabInternal: {fileID: 145282531}
+--- !u!1 &173973350
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 173973351}
+  - component: {fileID: 173973352}
+  m_Layer: 0
+  m_Name: Room3BoundingBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &173973351
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 173973350}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.8, y: -59.44088, z: 7.1473293}
+  m_LocalScale: {x: 39.88548, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1246241398}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &173973352
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 173973350}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 5.855255}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 12.71051}
+  m_EdgeRadius: 0
 --- !u!1 &241201595
 GameObject:
   m_ObjectHideFlags: 0
@@ -1044,6 +1098,7 @@ Transform:
   - {fileID: 711291731}
   - {fileID: 658344370}
   - {fileID: 1649642287}
+  - {fileID: 842246312}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1762,6 +1817,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 865308948}
+        m_MethodName: SetBoundingBox
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 173973352}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.BoxCollider2D, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   interactionFailTriggers:
@@ -1894,6 +1960,17 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 865308946}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 865308948}
+        m_MethodName: SetBoundingBox
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1136599166}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.BoxCollider2D, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2564,6 +2641,60 @@ GameObject:
   m_PrefabParentObject: {fileID: 1654880976114704, guid: 19184e72d5b0b9647accb404b02dd183,
     type: 2}
   m_PrefabInternal: {fileID: 811126425}
+--- !u!1 &842246311
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 842246312}
+  - component: {fileID: 842246313}
+  m_Layer: 0
+  m_Name: Room2BoundingBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &842246312
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 842246311}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.510002, y: -59.44088, z: 7.1473293}
+  m_LocalScale: {x: 39.885475, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 458040672}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &842246313
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 842246311}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 5.855255}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 12.71051}
+  m_EdgeRadius: 0
 --- !u!1 &856816819
 GameObject:
   m_ObjectHideFlags: 0
@@ -2606,6 +2737,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1816710255}
   m_Script: {fileID: 11500000, guid: 3c845c4c6c5c2884c92b074df3d928fc, type: 3}
+--- !u!114 &865308948 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114875297823851988, guid: ee4de2966f9bad140b8eb1c498fd9057,
+    type: 2}
+  m_PrefabInternal: {fileID: 1816710255}
+  m_Script: {fileID: 11500000, guid: fb617f34dbb374e4896aedcd3b8abc6d, type: 3}
 --- !u!114 &865308951 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114309283577064586, guid: ee4de2966f9bad140b8eb1c498fd9057,
@@ -2665,6 +2802,17 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 865308946}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 865308948}
+        m_MethodName: SetBoundingBox
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 842246313}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.BoxCollider2D, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3206,6 +3354,60 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &1048925463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1048925464}
+  - component: {fileID: 1048925465}
+  m_Layer: 0
+  m_Name: Room4BoundingBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1048925464
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1048925463}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.6, y: -59.44088, z: 7.1473293}
+  m_LocalScale: {x: 39.88548, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1080891930}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1048925465
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1048925463}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 5.855255}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 12.71051}
+  m_EdgeRadius: 0
 --- !u!1 &1053401035 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1654880976114704, guid: 19184e72d5b0b9647accb404b02dd183,
@@ -3241,6 +3443,7 @@ Transform:
   - {fileID: 1598668165}
   - {fileID: 856816820}
   - {fileID: 655349235}
+  - {fileID: 1048925464}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3768,6 +3971,60 @@ GameObject:
   m_PrefabParentObject: {fileID: 1654880976114704, guid: 19184e72d5b0b9647accb404b02dd183,
     type: 2}
   m_PrefabInternal: {fileID: 1693543058}
+--- !u!1 &1136599164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1136599165}
+  - component: {fileID: 1136599166}
+  m_Layer: 0
+  m_Name: RoomOneBoundingBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1136599165
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1136599164}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.879162, y: -7.818633, z: 7.028871}
+  m_LocalScale: {x: 32.763153, y: 0.12750128, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1768430018}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1136599166
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1136599164}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 11.044704}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 23.089409}
+  m_EdgeRadius: 0
 --- !u!1001 &1141441378
 Prefab:
   m_ObjectHideFlags: 0
@@ -4281,6 +4538,7 @@ Transform:
   - {fileID: 668311657}
   - {fileID: 1648534790}
   - {fileID: 2035949213}
+  - {fileID: 173973351}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5378,6 +5636,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 865308948}
+        m_MethodName: SetBoundingBox
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 842246313}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.BoxCollider2D, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   interactionFailTriggers:
@@ -5510,6 +5779,17 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 865308946}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 865308948}
+        m_MethodName: SetBoundingBox
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 173973352}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.BoxCollider2D, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6307,6 +6587,7 @@ Transform:
   m_Children:
   - {fileID: 884711715}
   - {fileID: 1157496794}
+  - {fileID: 1136599165}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6647,11 +6928,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4345930879777436, guid: ee4de2966f9bad140b8eb1c498fd9057, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 52.17
+      value: 12.4
       objectReference: {fileID: 0}
     - target: {fileID: 4345930879777436, guid: ee4de2966f9bad140b8eb1c498fd9057, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -57.05
+      value: -57.15
       objectReference: {fileID: 0}
     - target: {fileID: 4345930879777436, guid: ee4de2966f9bad140b8eb1c498fd9057, type: 2}
       propertyPath: m_LocalPosition.z
@@ -6757,6 +7038,11 @@ Prefab:
       propertyPath: defaultSpriteMaterial
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 114875297823851988, guid: ee4de2966f9bad140b8eb1c498fd9057,
+        type: 2}
+      propertyPath: boundingBox
+      value: 
+      objectReference: {fileID: 1136599166}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ee4de2966f9bad140b8eb1c498fd9057, type: 2}
   m_IsPrefabParent: 0
@@ -7221,6 +7507,17 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 865308946}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 865308948}
+        m_MethodName: SetBoundingBox
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1048925465}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.BoxCollider2D, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
