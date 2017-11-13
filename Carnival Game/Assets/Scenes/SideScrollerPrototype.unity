@@ -798,7 +798,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 373241936}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.000030517578, y: 0.0008239746, z: 0}
+  m_LocalPosition: {x: -0.003112793, y: -0.011871338, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 403934162}
@@ -806,8 +806,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000030518, y: 0.00082397}
-  m_SizeDelta: {x: 800, y: 449.79}
+  m_AnchoredPosition: {x: -0.0031166, y: -0.011871}
+  m_SizeDelta: {x: 924, y: 519.47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &373241938
 MonoBehaviour:
@@ -1789,6 +1789,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8be08d6b4203ec48abd8d8057c5d494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objToTeleport: {fileID: 865308946}
+  teleportTo: {fileID: 2035949212}
+  switchBoundingBoxTo: {fileID: 173973352}
+  fadeTime: 0.5
 --- !u!114 &655349237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1806,23 +1810,12 @@ MonoBehaviour:
   interactionSuccessTriggers:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2035949214}
-        m_MethodName: TeleportHere
-        m_Mode: 2
+      - m_Target: {fileID: 655349236}
+        m_MethodName: ActivateTeleport
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 865308946}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 865308948}
-        m_MethodName: SetBoundingBox
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 173973352}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.BoxCollider2D, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1922,7 +1915,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -9.100006, y: -56.516747, z: 0.118458375}
   m_LocalScale: {x: 1.7096983, y: 5.4865, z: 5.4865}
-  m_Children: []
+  m_Children:
+  - {fileID: 1404808769}
   m_Father: {fileID: 458040672}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1937,6 +1931,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8be08d6b4203ec48abd8d8057c5d494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objToTeleport: {fileID: 865308946}
+  teleportTo: {fileID: 884711710}
+  switchBoundingBoxTo: {fileID: 1136599166}
+  fadeTime: 0.5
 --- !u!114 &658344372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1954,23 +1952,12 @@ MonoBehaviour:
   interactionSuccessTriggers:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 884711711}
-        m_MethodName: TeleportHere
-        m_Mode: 2
+      - m_Target: {fileID: 658344371}
+        m_MethodName: ActivateTeleport
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 865308946}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 865308948}
-        m_MethodName: SetBoundingBox
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1136599166}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.BoxCollider2D, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2737,12 +2724,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1816710255}
   m_Script: {fileID: 11500000, guid: 3c845c4c6c5c2884c92b074df3d928fc, type: 3}
---- !u!114 &865308948 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114875297823851988, guid: ee4de2966f9bad140b8eb1c498fd9057,
-    type: 2}
-  m_PrefabInternal: {fileID: 1816710255}
-  m_Script: {fileID: 11500000, guid: fb617f34dbb374e4896aedcd3b8abc6d, type: 3}
 --- !u!114 &865308951 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114309283577064586, guid: ee4de2966f9bad140b8eb1c498fd9057,
@@ -2779,6 +2760,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8be08d6b4203ec48abd8d8057c5d494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objToTeleport: {fileID: 865308946}
+  teleportTo: {fileID: 1404808768}
+  switchBoundingBoxTo: {fileID: 842246313}
+  fadeTime: 0.5
 --- !u!114 &884711712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2796,23 +2781,12 @@ MonoBehaviour:
   interactionSuccessTriggers:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 658344371}
-        m_MethodName: TeleportHere
-        m_Mode: 2
+      - m_Target: {fileID: 884711711}
+        m_MethodName: ActivateTeleport
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 865308946}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 865308948}
-        m_MethodName: SetBoundingBox
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 842246313}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.BoxCollider2D, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5020,6 +4994,34 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a50c98c1d7fe66846aaed5eadfd19565, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1404808768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1404808769}
+  m_Layer: 0
+  m_Name: tpSpot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1404808769
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1404808768}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.34, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 658344370}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1444232749
 GameObject:
   m_ObjectHideFlags: 0
@@ -5608,6 +5610,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8be08d6b4203ec48abd8d8057c5d494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objToTeleport: {fileID: 865308946}
+  teleportTo: {fileID: 1649642286}
+  switchBoundingBoxTo: {fileID: 842246313}
+  fadeTime: 0.5
 --- !u!114 &1648534792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5625,23 +5631,12 @@ MonoBehaviour:
   interactionSuccessTriggers:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1649642288}
-        m_MethodName: TeleportHere
-        m_Mode: 2
+      - m_Target: {fileID: 1648534791}
+        m_MethodName: ActivateTeleport
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 865308946}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 865308948}
-        m_MethodName: SetBoundingBox
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 842246313}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.BoxCollider2D, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5756,6 +5751,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8be08d6b4203ec48abd8d8057c5d494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objToTeleport: {fileID: 865308946}
+  teleportTo: {fileID: 1648534789}
+  switchBoundingBoxTo: {fileID: 173973352}
+  fadeTime: 0.5
 --- !u!114 &1649642289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5773,23 +5772,12 @@ MonoBehaviour:
   interactionSuccessTriggers:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1648534791}
-        m_MethodName: TeleportHere
-        m_Mode: 2
+      - m_Target: {fileID: 1649642288}
+        m_MethodName: ActivateTeleport
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 865308946}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 865308948}
-        m_MethodName: SetBoundingBox
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 173973352}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.BoxCollider2D, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -7484,6 +7472,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8be08d6b4203ec48abd8d8057c5d494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objToTeleport: {fileID: 865308946}
+  teleportTo: {fileID: 655349234}
+  switchBoundingBoxTo: {fileID: 1048925465}
+  fadeTime: 0.5
 --- !u!114 &2035949215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7501,23 +7493,12 @@ MonoBehaviour:
   interactionSuccessTriggers:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 655349236}
-        m_MethodName: TeleportHere
-        m_Mode: 2
+      - m_Target: {fileID: 2035949214}
+        m_MethodName: ActivateTeleport
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 865308946}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 865308948}
-        m_MethodName: SetBoundingBox
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1048925465}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.BoxCollider2D, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

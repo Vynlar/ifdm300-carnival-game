@@ -49,8 +49,6 @@ public class CameraFollow : MonoBehaviour {
             float boundsOffsetY = (followCam.orthographicSize * 2)/2;
             float boundsOffsetX = (boundsOffsetY * followCam.aspect);
 
-            Debug.Log("X: " + boundsOffsetX + " Y: " + boundsOffsetY);
-
             if (cameraTrans.x - boundsOffsetX < boundingBox.bounds.min.x)
             {
                 cameraTrans = new Vector3(boundingBox.bounds.min.x + boundsOffsetX, cameraTrans.y, cameraTrans.z);

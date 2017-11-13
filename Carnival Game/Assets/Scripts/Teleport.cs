@@ -5,8 +5,20 @@ using UnityEngine.UI;
 
 public class Teleport : MonoBehaviour {
 
+    public GameObject objToTeleport;
+    public GameObject teleportTo;
+    public BoxCollider2D switchBoundingBoxTo = null;
+    public float fadeTime = 0.5f;
+
+    // Image used to fade between scenes
+    private Image fadeImage;
+
+    private bool tpPlayer = false;
+    private bool fadingOut = false;
+
 	// Use this for initialization
 	void Start () {
+        fadeImage = GameObject.Find("FadeImage").GetComponent<Image>();
 
     }
 	
@@ -16,9 +28,67 @@ public class Teleport : MonoBehaviour {
 	}
 
     // Teleports the object to this transform's position
-    public void TeleportHere(GameObject obj)
+    public void ActivateTeleport()
     {
-        obj.transform.position = this.transform.position;
+        if (fadeImage != null)
+        {
+            StopAllCoroutines();
+            StartCoroutine(FadeOut());
+        }
+    }
+
+    IEnumerator FadeOut()
+    {
+        fadeImage.color = new Color(0, 0, 0, 0);
+        float timer = 0;
+        while (timer < fadeTime)
+        {
+            timer += Time.deltaTime;
+            fadeImage.color = new Color(0, 0, 0, 1 * (timer / fadeTime));
+            if(fadeImage.color.a >= 1)
+            {
+                fadeImage.color = new Color(0, 0, 0, 1);
+            }
+            yield return null;
+        }
+
+        // Fade back in
+        StartCoroutine(FadeIn());
+    }
+
+    IEnumerator FadeIn()
+    {
+        fadeImage.color = new Color(0, 0, 0, 0);
+        // We've finished fading, so teleport the player
+        objToTeleport.transform.position = teleportTo.transform.position;
+
+        // Then change the bounding box
+        if (switchBoundingBoxTo != null)
+        {
+            CameraFollow cFollow = objToTeleport.GetComponent<CameraFollow>();
+            PlayerController pController = objToTeleport.GetComponent<PlayerController>();
+
+            if (cFollow)
+            {
+                cFollow.SetBoundingBox(switchBoundingBoxTo);
+            }
+            if (pController)
+            {
+                //pController.enabled = false;
+            }
+        }
+
+        float timeLeft = fadeTime;
+        while (timeLeft > 0)
+        {
+            timeLeft -= Time.deltaTime;
+            fadeImage.color = new Color(0, 0, 0, 1 * (timeLeft / fadeTime));
+            if (fadeImage.color.a <= 0)
+            {
+                fadeImage.color = new Color(0, 0, 0, 0);
+            }
+            yield return null;
+        }
     }
 
 }
