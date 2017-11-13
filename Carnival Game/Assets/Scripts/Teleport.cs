@@ -40,6 +40,15 @@ public class Teleport : MonoBehaviour {
     IEnumerator FadeOut()
     {
         fadeImage.color = new Color(0, 0, 0, 0);
+
+        PlayerController pController = objToTeleport.GetComponent<PlayerController>();
+
+        if (pController)
+        {
+            pController.enabled = false;
+        }
+
+
         float timer = 0;
         while (timer < fadeTime)
         {
@@ -50,6 +59,11 @@ public class Teleport : MonoBehaviour {
                 fadeImage.color = new Color(0, 0, 0, 1);
             }
             yield return null;
+        }
+
+        if(pController)
+        {
+            pController.enabled = true;
         }
 
         // Fade back in
@@ -66,15 +80,10 @@ public class Teleport : MonoBehaviour {
         if (switchBoundingBoxTo != null)
         {
             CameraFollow cFollow = objToTeleport.GetComponent<CameraFollow>();
-            PlayerController pController = objToTeleport.GetComponent<PlayerController>();
 
             if (cFollow)
             {
                 cFollow.SetBoundingBox(switchBoundingBoxTo);
-            }
-            if (pController)
-            {
-                //pController.enabled = false;
             }
         }
 
