@@ -1,8 +1,10 @@
 ﻿// Draws an HDR outline over the sprite borders. 
 // Based on Sprites/Default shader from Unity 2017.2.
 
+
 Shader "Sprites/Outline"
 {
+
     Properties
     {
         [PerRendererData] _MainTex("Sprite Texture", 2D) = "white" {}
@@ -38,12 +40,11 @@ Shader "Sprites/Outline"
         Pass
         {
             CGPROGRAM
-
             #include "UnityCG.cginc"
 
             #pragma vertex ComputeVertex
             #pragma fragment ComputeFragment
-            #pragma target 2.0
+            #pragma target 3.5
             #pragma multi_compile_instancing
             #pragma multi_compile _ PIXELSNAP_ON
             #pragma multi_compile _ ETC1_EXTERNAL_ALPHA
