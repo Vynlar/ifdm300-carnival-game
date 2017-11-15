@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿#if (UNITY_EDITOR)
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 using UnityEngine.Events;
+using UnityEditor;
 
 public class AddDialogDefaults : ScriptableObject {
 
@@ -103,3 +105,4 @@ public class AddDialogDefaults : ScriptableObject {
     }
 
 }
+# endif

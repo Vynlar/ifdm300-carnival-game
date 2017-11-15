@@ -13,13 +13,9 @@ public class Teleport : MonoBehaviour {
     // Image used to fade between scenes
     private Image fadeImage;
 
-    private bool tpPlayer = false;
-    private bool fadingOut = false;
-
 	// Use this for initialization
 	void Start () {
         fadeImage = GameObject.Find("FadeImage").GetComponent<Image>();
-
     }
 	
 	// Update is called once per frame
