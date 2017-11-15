@@ -485,7 +485,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 241201595}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -475.1188, y: 118.87305, z: 0}
+  m_LocalPosition: {x: -467.7333, y: 122.71306, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1855266981}
@@ -606,7 +606,7 @@ Prefab:
     - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
         type: 2}
       propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4296369242822364, guid: 19184e72d5b0b9647accb404b02dd183, type: 2}
       propertyPath: m_LocalPosition.x
@@ -721,7 +721,7 @@ Prefab:
     - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
         type: 2}
       propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
         type: 2}
@@ -752,6 +752,56 @@ Prefab:
       propertyPath: m_Size.y
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1598668167}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetDialogState
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: turnin
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 865308947}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: RemoveItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1334202840}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19184e72d5b0b9647accb404b02dd183, type: 2}
   m_IsPrefabParent: 0
@@ -842,7 +892,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 357945296}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.45, y: -55.73, z: -10}
+  m_LocalPosition: {x: 10.3, y: -55.73, z: -10}
   m_LocalScale: {x: 0.8561923, y: 0.8561921, z: 0.8561921}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1028,8 +1078,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 403934158}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1163.3389, y: 421.6634, z: 0.28894457}
-  m_LocalScale: {x: 3.5617323, y: 3.5617335, z: 3.5617335}
+  m_LocalPosition: {x: 1120.0431, y: 426.36948, z: 0.28894457}
+  m_LocalScale: {x: 3.5260925, y: 3.5260937, z: 3.5260937}
   m_Children:
   - {fileID: 606485796}
   - {fileID: 241201596}
@@ -1043,6 +1093,105 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &416176923
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 416176924}
+  - component: {fileID: 416176926}
+  - component: {fileID: 416176925}
+  m_Layer: 0
+  m_Name: floor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &416176924
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 416176923}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.739517, y: -7.8525314, z: 0}
+  m_LocalScale: {x: 33.235905, y: 0.12750128, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1738635828}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &416176925
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 416176923}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!212 &416176926
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 416176923}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 2714ed562d0bd054390268be429b15b7, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &456862787
 GameObject:
   m_ObjectHideFlags: 0
@@ -1246,6 +1395,42 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 469106218}
+--- !u!1 &509923504 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1654880976114704, guid: 19184e72d5b0b9647accb404b02dd183,
+    type: 2}
+  m_PrefabInternal: {fileID: 1663912935}
+--- !u!1 &518441585
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 518441586}
+  m_Layer: 0
+  m_Name: Room5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &518441586
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 518441585}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 161, y: 2.612, z: 0}
+  m_LocalScale: {x: 1.2173882, y: 7.8430586, z: 1}
+  m_Children:
+  - {fileID: 1443414225}
+  - {fileID: 1738635828}
+  - {fileID: 2118134276}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &527287639
 Prefab:
   m_ObjectHideFlags: 0
@@ -1467,7 +1652,7 @@ Prefab:
     - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
         type: 2}
       propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4296369242822364, guid: 19184e72d5b0b9647accb404b02dd183, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1557,7 +1742,7 @@ Prefab:
     - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
         type: 2}
       propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: AddItem
+      value: RemoveItem
       objectReference: {fileID: 0}
     - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
         type: 2}
@@ -1578,11 +1763,11 @@ Prefab:
         type: 2}
       propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 1126026020}
+      objectReference: {fileID: 1053401035}
     - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
         type: 2}
       propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
         type: 2}
@@ -1618,6 +1803,56 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 3.8224425
       objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1115539120}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetDialogState
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: turnin
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 865308947}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: AddItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1126026020}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19184e72d5b0b9647accb404b02dd183, type: 2}
   m_IsPrefabParent: 0
@@ -1647,7 +1882,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 606485795}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 126.99295, y: 151.58304, z: 0}
+  m_LocalPosition: {x: 125.08194, y: 155.42305, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1122093262}
@@ -1721,7 +1956,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 646903346}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.021255493, z: 0}
+  m_LocalPosition: {x: 0, y: -0.01712799, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 469106219}
@@ -1730,7 +1965,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.375, y: 0.41}
   m_AnchorMax: {x: 0.625, y: 0.58}
-  m_AnchoredPosition: {x: -0.0000004172307, y: 2.5}
+  m_AnchoredPosition: {x: -0.0000004172325, y: 2.5}
   m_SizeDelta: {x: 0.000045776, y: -8.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &646903348
@@ -2160,7 +2395,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 703337474}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 300.20117, y: -73.66, z: 0}
+  m_LocalPosition: {x: 295.59445, y: -73.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 606485796}
@@ -2371,7 +2606,7 @@ Prefab:
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
@@ -2584,6 +2819,105 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19184e72d5b0b9647accb404b02dd183, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &810789410
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 810789411}
+  - component: {fileID: 810789413}
+  - component: {fileID: 810789412}
+  m_Layer: 0
+  m_Name: floor (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &810789411
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 810789410}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.378593, y: -7.416222, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1738635828}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &810789412
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 810789410}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!212 &810789413
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 810789410}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 2714ed562d0bd054390268be429b15b7, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1001 &811126425
 Prefab:
   m_ObjectHideFlags: 0
@@ -2978,7 +3312,7 @@ Prefab:
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
@@ -3226,7 +3560,7 @@ Prefab:
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -116.331924
       objectReference: {fileID: 0}
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
@@ -3447,7 +3781,7 @@ Transform:
   m_LocalScale: {x: 39.88548, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1080891930}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1048925465
 BoxCollider2D:
@@ -3479,6 +3813,19 @@ GameObject:
   m_PrefabParentObject: {fileID: 1654880976114704, guid: 19184e72d5b0b9647accb404b02dd183,
     type: 2}
   m_PrefabInternal: {fileID: 784084331}
+--- !u!114 &1053401036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1053401035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c0929c255915c4c83a8622388eb4b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 
+  dQueues: []
 --- !u!1 &1080891929
 GameObject:
   m_ObjectHideFlags: 0
@@ -3509,6 +3856,7 @@ Transform:
   - {fileID: 1598668165}
   - {fileID: 856816820}
   - {fileID: 655349235}
+  - {fileID: 1872296751}
   - {fileID: 1048925464}
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -3651,17 +3999,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 865308947}
-        m_MethodName: AddItem
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 811126427}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   interactionFailTriggers:
@@ -3687,9 +4024,10 @@ MonoBehaviour:
     - statement: "Eyyyy, I\u2019ve never seen your face before. I gotta deal ya can\u2019t
         refuse\u2026. Magic cards. Only 500 dollars. "
     - statement: "This deal won\u2019t last long, kid. I\u2019ll throw in a floating
-        candle while I\u2019m at it. Ya may as well be stealin from me! Whaddaya say?"
+        candle while I\u2019m at it. Ya may as well be stealin from me! ... Nothin\u2019?
+        Alright, you do you.\r\n"
     dialogueActions:
-    - text: Sure
+    - text: Done
       action:
         m_PersistentCalls:
           m_Calls:
@@ -3712,15 +4050,27 @@ MonoBehaviour:
               m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
               m_IntArgument: 0
               m_FloatArgument: 0
-              m_StringArgument: saidyesatbase
+              m_StringArgument: hint
               m_BoolArgument: 0
             m_CallState: 2
-          - m_Target: {fileID: 1115539120}
-            m_MethodName: TriggerDialog
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+  - StateKey: hint
+    dialogStatements:
+    - statement: "Still not gonna say anything? Man, kid, you\u2019re hard to impress\u2026
+        I feel like you remind me of someone. They never wanted anything I was sellin\u2019
+        either."
+    dialogueActions:
+    - text: Done
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1290051032}
+            m_MethodName: HideDialogue
             m_Mode: 1
             m_Arguments:
               m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_ObjectArgumentAssemblyTypeName: 
               m_IntArgument: 0
               m_FloatArgument: 0
               m_StringArgument: 
@@ -3728,7 +4078,15 @@ MonoBehaviour:
             m_CallState: 2
         m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-    - text: No Thanks...
+  - StateKey: turnin
+    dialogStatements:
+    - statement: "\u2026\u2026. EY! That\u2019s my estranged daughta\u2026. STILL
+        WALKIN! EY! Man, for a kid who says nothin\u2019, you sure know how to pull
+        the heartstrings.."
+    - statement: "Oh, hey, kid, I found this a while back. \u2018Might be useful for
+        you"
+    dialogueActions:
+    - text: Give Old Picture
       action:
         m_PersistentCalls:
           m_Calls:
@@ -3751,15 +4109,37 @@ MonoBehaviour:
               m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
               m_IntArgument: 0
               m_FloatArgument: 0
-              m_StringArgument: saidnoatbase
+              m_StringArgument: done
               m_BoolArgument: 0
             m_CallState: 2
-          - m_Target: {fileID: 1115539120}
-            m_MethodName: TriggerDialog
+          - m_Target: {fileID: 1872296758}
+            m_MethodName: incrementStatus
             m_Mode: 1
             m_Arguments:
               m_ObjectArgument: {fileID: 0}
               m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 865308947}
+            m_MethodName: RemoveItem
+            m_Mode: 2
+            m_Arguments:
+              m_ObjectArgument: {fileID: 1126026020}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 865308947}
+            m_MethodName: AddItem
+            m_Mode: 2
+            m_Arguments:
+              m_ObjectArgument: {fileID: 811126427}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
               m_IntArgument: 0
               m_FloatArgument: 0
               m_StringArgument: 
@@ -3784,99 +4164,9 @@ MonoBehaviour:
             m_CallState: 2
         m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-  - StateKey: saidyesatbase
+  - StateKey: done
     dialogStatements:
-    - statement: Ey... You don't even have any money! What are you tryin' to pull,
-        kiddo?
-    dialogueActions:
-    - text: '...'
-      action:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 1290051032}
-            m_MethodName: HideDialogue
-            m_Mode: 1
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: 
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-          - m_Target: {fileID: 1115539120}
-            m_MethodName: SetDialogState
-            m_Mode: 5
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: remindmeofsome1
-              m_BoolArgument: 0
-            m_CallState: 2
-          - m_Target: {fileID: 1115539120}
-            m_MethodName: TriggerDialog
-            m_Mode: 1
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-  - StateKey: saidnoatbase
-    dialogStatements:
-    - statement: Not good enough? Man, kid. You're hard to impress...
-    dialogueActions:
-    - text: '...'
-      action:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 1290051032}
-            m_MethodName: HideDialogue
-            m_Mode: 1
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: 
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-          - m_Target: {fileID: 1115539120}
-            m_MethodName: SetDialogState
-            m_Mode: 5
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: remindmeofsome1
-              m_BoolArgument: 0
-            m_CallState: 2
-          - m_Target: {fileID: 1115539120}
-            m_MethodName: TriggerDialog
-            m_Mode: 1
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-  - StateKey: remindmeofsome1
-    dialogStatements:
-    - statement: I get it... I'm not really that good at this kind of thing. Even
-        learning magic hasn't helped.
-    - statement: You know, I feel like you remind me of someone. They never really
-        wanted what I was sellin' either.....
+    - statement: Thanks!
     dialogueActions:
     - text: Done
       action:
@@ -3980,7 +4270,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1122093261}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -270.22192, y: 67.194, z: 0}
+  m_LocalPosition: {x: -266.07587, y: 67.194, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 606485796}
@@ -4106,7 +4396,7 @@ Prefab:
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
@@ -4858,6 +5148,19 @@ GameObject:
   m_PrefabParentObject: {fileID: 1654880976114704, guid: 19184e72d5b0b9647accb404b02dd183,
     type: 2}
   m_PrefabInternal: {fileID: 1334202838}
+--- !u!114 &1334202841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1334202840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c0929c255915c4c83a8622388eb4b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 
+  dQueues: []
 --- !u!1 &1355308537
 GameObject:
   m_ObjectHideFlags: 0
@@ -4972,7 +5275,7 @@ Prefab:
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
@@ -5114,6 +5417,147 @@ Transform:
   m_Father: {fileID: 658344370}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1443414224
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1443414225}
+  - component: {fileID: 1443414229}
+  - component: {fileID: 1443414228}
+  - component: {fileID: 1443414227}
+  - component: {fileID: 1443414226}
+  m_Layer: 0
+  m_Name: Entrance
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1443414225
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1443414224}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.48, y: -7.445802, z: 0}
+  m_LocalScale: {x: 1.4043999, y: 0.6995357, z: 5.4865}
+  m_Children: []
+  m_Father: {fileID: 518441586}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1443414226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1443414224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8be08d6b4203ec48abd8d8057c5d494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objToTeleport: {fileID: 865308946}
+  teleportTo: {fileID: 1872296750}
+  switchBoundingBoxTo: {fileID: 1048925465}
+  fadeTime: 0.5
+--- !u!114 &1443414227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1443414224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7a590060cbab2c43be56c759e0365ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPickup: 0
+  requiredObjects: []
+  interactionSounds: []
+  interactionSuccessTriggers:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1443414226}
+        m_MethodName: ActivateTeleport
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  interactionFailTriggers:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!58 &1443414228
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1443414224}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.75
+--- !u!212 &1443414229
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1443414224}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 1451927355
+  m_SortingLayer: 3
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 2714ed562d0bd054390268be429b15b7, type: 3}
+  m_Color: {r: 0.8308824, g: 0.47223774, b: 0.018328305, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.56, y: 0.88}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &1444232749
 GameObject:
   m_ObjectHideFlags: 0
@@ -5139,7 +5583,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1444232749}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1163.3389, y: 421.6634, z: 0.28894457}
+  m_LocalPosition: {x: 1120.0431, y: 426.36948, z: 0.28894457}
   m_LocalScale: {x: 1.8824253, y: 1.8824259, z: 1.8824259}
   m_Children: []
   m_Father: {fileID: 558855357}
@@ -5351,8 +5795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPickup: 0
-  requiredObjects:
-  - {fileID: 907544333}
+  requiredObjects: []
   interactionSounds: []
   interactionSuccessTriggers:
     m_PersistentCalls:
@@ -5363,17 +5806,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 865308947}
-        m_MethodName: AddItem
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1209039718}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5401,9 +5833,140 @@ MonoBehaviour:
   dQueues:
   - StateKey: base
     dialogStatements:
-    - statement: ohai there.
-    - statement: It'd be really cool if the whole <b>Dialogue Manager</b> decided
-        to work the way I wanted...
+    - statement: "\u201CHey! You wanna play a game? There\u2019s not very many people
+        around here that do. I mostly stick to myself, makin\u2019 balloon animals
+        and what not. Would you like one?"
+    - statement: " \u2026 That\u2019s cool. No one else seems to either."
+    dialogueActions:
+    - text: Done
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1290051032}
+            m_MethodName: HideDialogue
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+  - StateKey: hint
+    dialogStatements:
+    - statement: "If you want a balloon animal, there might be one around here somewhere.
+        I kinda ran out of balloons recently\u2026 But, you know. YOLO! Maybe I\u2019ll
+        start making \u2018m out of socks."
+    dialogueActions:
+    - text: Done
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1290051032}
+            m_MethodName: HideDialogue
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+  - StateKey: turnin
+    dialogStatements:
+    - statement: "What\u2019s this? A detention slip? \u2026 Ha! Oh, I remember this!
+        Crispin had such good ideas. We hid balloons under the cushions of everyone\u2019s
+        chairs and had strings we could pull to pop them at random times."
+    - statement: The teacher was so convinced that there was witchcraft going on.
+        It was hilarious. Oh, here, maybe you can use this.
+    dialogueActions:
+    - text: Give Detention Slip
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1290051032}
+            m_MethodName: HideDialogue
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 865308947}
+            m_MethodName: RemoveItem
+            m_Mode: 2
+            m_Arguments:
+              m_ObjectArgument: {fileID: 907544333}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 865308947}
+            m_MethodName: AddItem
+            m_Mode: 2
+            m_Arguments:
+              m_ObjectArgument: {fileID: 1209039718}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 1598668167}
+            m_MethodName: SetDialogState
+            m_Mode: 5
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: done
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 1872296758}
+            m_MethodName: incrementStatus
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+    - text: Done
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1290051032}
+            m_MethodName: HideDialogue
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+  - StateKey: done
+    dialogStatements:
+    - statement: Thanks!
     dialogueActions:
     - text: Done
       action:
@@ -6024,87 +6587,13 @@ MonoBehaviour:
   dQueues:
   - StateKey: base
     dialogStatements:
-    - statement: 'I''m the fortune teller! '
-    - statement: Man, I lost my stuff. Can you find it?
+    - statement: "I was expecting you\u2019d be here\u2026. Well, mostly. You\u2019re
+        a little shorter than I thought you were going to be. Do you want to see your
+        fortune?"
+    - statement: "I\u2019ve gotten pretty good at it after all this time. I only seem
+        to miss minor details. I bet I can tell you what the weather is going to be
+        like tomorrow!"
     dialogueActions:
-    - text: Yes
-      action:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 1290051032}
-            m_MethodName: HideDialogue
-            m_Mode: 1
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: 
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-          - m_Target: {fileID: 1657589466}
-            m_MethodName: SetDialogState
-            m_Mode: 5
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: sayyesatbase
-              m_BoolArgument: 0
-            m_CallState: 2
-          - m_Target: {fileID: 1657589466}
-            m_MethodName: TriggerDialog
-            m_Mode: 1
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-    - text: No
-      action:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 1290051032}
-            m_MethodName: HideDialogue
-            m_Mode: 1
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: 
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-          - m_Target: {fileID: 1657589466}
-            m_MethodName: SetDialogState
-            m_Mode: 5
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: saynoatbase
-              m_BoolArgument: 0
-            m_CallState: 2
-          - m_Target: {fileID: 1657589466}
-            m_MethodName: TriggerDialog
-            m_Mode: 1
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
     - text: Done
       action:
         m_PersistentCalls:
@@ -6120,12 +6609,27 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 0
             m_CallState: 2
+          - m_Target: {fileID: 1657589466}
+            m_MethodName: SetDialogState
+            m_Mode: 5
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: hint
+              m_BoolArgument: 0
+            m_CallState: 2
         m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
   - StateKey: hint
     dialogStatements:
-    - statement: Man, what am I gonna do without my super cool gambling stuff? I need
-        to gamble man... I need to!
+    - statement: "I think I would be better at telling the future if I had a crystal
+        ball\u2026 That\u2019s what all the professionals use, right? Then I could
+        gamble at the horse races. And use it at all the casinos."
+    - statement: "Maybe then my mother would be satisfied\u2026 I spend a lot of time
+        trying to make sure she\u2019s taken care of, but she never seems to appreciate
+        it. So, forget the crystal ball. Let\u2019s just go for a lucky spin."
     dialogueActions:
     - text: Done
       action:
@@ -6146,24 +6650,16 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
   - StateKey: turnin
     dialogStatements:
-    - statement: Hey, did you have that object that I need? I need to tell the future
-        here.
+    - statement: "Oh, what are these? \u2026 Dice \u2026 My dice? These are my lucky
+        dice! My mother gave these. \u2026 Thank you, young one."
+    - statement: "I didn\u2019t anticipate this, but sometimes the stars tell the
+        past as well as the future, and you seemed to read them quite well. Oh, I
+        found this note a long time ago--something tells me you\u2019ll need it."
     dialogueActions:
     - text: Give Lucky Dice
       action:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 1657589466}
-            m_MethodName: SetDialogState
-            m_Mode: 5
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: done
-              m_BoolArgument: 0
-            m_CallState: 2
           - m_Target: {fileID: 865308947}
             m_MethodName: RemoveItem
             m_Mode: 2
@@ -6175,8 +6671,19 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 0
             m_CallState: 2
-          - m_Target: {fileID: 1657589466}
-            m_MethodName: TriggerDialog
+          - m_Target: {fileID: 865308947}
+            m_MethodName: AddItem
+            m_Mode: 2
+            m_Arguments:
+              m_ObjectArgument: {fileID: 509923504}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 1290051032}
+            m_MethodName: HideDialogue
             m_Mode: 1
             m_Arguments:
               m_ObjectArgument: {fileID: 0}
@@ -6184,6 +6691,28 @@ MonoBehaviour:
               m_IntArgument: 0
               m_FloatArgument: 0
               m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 1872296758}
+            m_MethodName: incrementStatus
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 1657589466}
+            m_MethodName: SetDialogState
+            m_Mode: 5
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: done
               m_BoolArgument: 0
             m_CallState: 2
         m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -6207,7 +6736,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
   - StateKey: done
     dialogStatements:
-    - statement: Wow, thanks boi. You done heckin' did it.
+    - statement: Thanks!
     dialogueActions:
     - text: Done
       action:
@@ -6222,71 +6751,6 @@ MonoBehaviour:
               m_IntArgument: 0
               m_FloatArgument: 0
               m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-  - StateKey: saynoatbase
-    dialogStatements:
-    - statement: Aw... well, I still believe it! you can't change what I think yo!
-    dialogueActions:
-    - text: Done
-      action:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 1290051032}
-            m_MethodName: HideDialogue
-            m_Mode: 1
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: 
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-          - m_Target: {fileID: 1657589466}
-            m_MethodName: SetDialogState
-            m_Mode: 5
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: hint
-              m_BoolArgument: 0
-            m_CallState: 2
-        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-  - StateKey: sayyesatbase
-    dialogStatements:
-    - statement: Well, I'm glad. If you find my awesome gambling stuff, you should
-        head back and give it to me.
-    dialogueActions:
-    - text: Done
-      action:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 1290051032}
-            m_MethodName: HideDialogue
-            m_Mode: 1
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: 
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-          - m_Target: {fileID: 1657589466}
-            m_MethodName: SetDialogState
-            m_Mode: 5
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: hint
               m_BoolArgument: 0
             m_CallState: 2
         m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -6640,6 +7104,37 @@ GameObject:
   m_PrefabParentObject: {fileID: 1182654890704468, guid: a50c98c1d7fe66846aaed5eadfd19565,
     type: 2}
   m_PrefabInternal: {fileID: 1402230066}
+--- !u!1 &1738635827
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1738635828}
+  m_Layer: 0
+  m_Name: Ground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1738635828
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1738635827}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 416176924}
+  - {fileID: 810789411}
+  - {fileID: 2125063738}
+  m_Father: {fileID: 518441586}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1768430017
 GameObject:
   m_ObjectHideFlags: 0
@@ -7008,7 +7503,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4345930879777436, guid: ee4de2966f9bad140b8eb1c498fd9057, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 12.4
+      value: 142.8
       objectReference: {fileID: 0}
     - target: {fileID: 4345930879777436, guid: ee4de2966f9bad140b8eb1c498fd9057, type: 2}
       propertyPath: m_LocalPosition.y
@@ -7122,7 +7617,7 @@ Prefab:
         type: 2}
       propertyPath: boundingBox
       value: 
-      objectReference: {fileID: 1136599166}
+      objectReference: {fileID: 1048925465}
     - target: {fileID: 212665435352850820, guid: ee4de2966f9bad140b8eb1c498fd9057,
         type: 2}
       propertyPath: m_Sprite
@@ -7184,7 +7679,7 @@ Prefab:
     - target: {fileID: 114309283577064586, guid: ee4de2966f9bad140b8eb1c498fd9057,
         type: 2}
       propertyPath: maxRunSpeed
-      value: 4
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ee4de2966f9bad140b8eb1c498fd9057, type: 2}
@@ -7212,6 +7707,311 @@ RectTransform:
   m_AnchoredPosition: {x: -187.50002, y: -68.600006}
   m_SizeDelta: {x: 380.1, y: 50.88}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1872296750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1872296751}
+  - component: {fileID: 1872296755}
+  - component: {fileID: 1872296754}
+  - component: {fileID: 1872296753}
+  - component: {fileID: 1872296756}
+  - component: {fileID: 1872296752}
+  - component: {fileID: 1872296758}
+  m_Layer: 0
+  m_Name: Exit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1872296751
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1872296750}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 28.24, y: -56.516747, z: 0.118458375}
+  m_LocalScale: {x: 1.7097, y: 5.4865, z: 5.4865}
+  m_Children: []
+  m_Father: {fileID: 1080891930}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1872296752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1872296750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8be08d6b4203ec48abd8d8057c5d494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objToTeleport: {fileID: 865308946}
+  teleportTo: {fileID: 1443414224}
+  switchBoundingBoxTo: {fileID: 2118134277}
+  fadeTime: 0.5
+--- !u!114 &1872296753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1872296750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7a590060cbab2c43be56c759e0365ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPickup: 0
+  requiredObjects:
+  - {fileID: 811126427}
+  - {fileID: 1209039718}
+  - {fileID: 509923504}
+  interactionSounds: []
+  interactionSuccessTriggers:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1872296752}
+        m_MethodName: ActivateTeleport
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  interactionFailTriggers:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1872296756}
+        m_MethodName: TriggerDialog
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!58 &1872296754
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1872296750}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.75
+--- !u!212 &1872296755
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1872296750}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 1451927355
+  m_SortingLayer: 3
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 2714ed562d0bd054390268be429b15b7, type: 3}
+  m_Color: {r: 0.7941176, g: 0.44361043, b: 0, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.56, y: 0.88}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+--- !u!114 &1872296756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1872296750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c0929c255915c4c83a8622388eb4b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: stage0
+  dQueues:
+  - StateKey: stage0
+    dialogStatements:
+    - statement: 'An old, wooden door. Letters can just barely be made out of the
+        peeling paint: Exit.'
+    - statement: "There seems to be dark energy surrounding it. There\u2019s no even
+        going near it."
+    dialogueActions:
+    - text: Done
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1290051032}
+            m_MethodName: HideDialogue
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+  - StateKey: stage1
+    dialogStatements:
+    - statement: 'An old, wooden door. Letters can just barely be made out of the
+        peeling paint: Exit.'
+    - statement: There seems to be dark energy surrounding it. It can be approached,
+        but no more.
+    dialogueActions:
+    - text: Done
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1290051032}
+            m_MethodName: HideDialogue
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+  - StateKey: stage2
+    dialogStatements:
+    - statement: 'An old, wooden door. Letters can just barely be made out of the
+        peeling paint: Exit.'
+    - statement: There seems to be dark energy surrounding it, but the door knob is
+        clearly visible now.
+    dialogueActions:
+    - text: Done
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1290051032}
+            m_MethodName: HideDialogue
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+  - StateKey: stage3
+    dialogStatements:
+    - statement: 'An old, wooden door. Letters can just barely be made out of the
+        peeling paint: Exit.'
+    - statement: The dark energy surrounding it has dissipated completely.
+    dialogueActions:
+    - text: Step Through
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1290051032}
+            m_MethodName: HideDialogue
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 1872296752}
+            m_MethodName: ActivateTeleport
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+    - text: Done
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1290051032}
+            m_MethodName: HideDialogue
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+--- !u!114 &1872296758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1872296750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a7fabc7de8b6dd4ca3c419330e047e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 1872296756}
 --- !u!224 &1888032984 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
@@ -7336,7 +8136,7 @@ Prefab:
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
@@ -7470,7 +8270,7 @@ Prefab:
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
@@ -7824,6 +8624,159 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &2118134275
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2118134276}
+  - component: {fileID: 2118134277}
+  m_Layer: 0
+  m_Name: Room5BoundingBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2118134276
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2118134275}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.879162, y: -7.818633, z: 7.028871}
+  m_LocalScale: {x: 32.763153, y: 0.12750128, z: 1}
+  m_Children: []
+  m_Father: {fileID: 518441586}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2118134277
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2118134275}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 11.044704}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 23.089409}
+  m_EdgeRadius: 0
+--- !u!1 &2125063737
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2125063738}
+  - component: {fileID: 2125063740}
+  - component: {fileID: 2125063739}
+  m_Layer: 0
+  m_Name: floor (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2125063738
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2125063737}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 23.979198, y: -7.416222, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1738635828}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2125063739
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2125063737}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!212 &2125063740
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2125063737}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 2714ed562d0bd054390268be429b15b7, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!224 &2142319153 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
@@ -7844,7 +8797,7 @@ Prefab:
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -116.331924
       objectReference: {fileID: 0}
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
