@@ -34,10 +34,16 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKey(KeyCode.D))
         {
             rb2d.AddForce(new Vector2(runSpeed, 0));
+            Vector2 newScale = this.transform.localScale;
+            newScale.x = Mathf.Abs(newScale.x);
+            this.transform.localScale = newScale;
         }
         if (Input.GetKey(KeyCode.A))
         {
             rb2d.AddForce(new Vector2(-runSpeed, 0));
+            Vector2 newScale = this.transform.localScale;
+            newScale.x = -Mathf.Abs(newScale.x);
+            this.transform.localScale = newScale;
         }
 
         // Cap the run speed
@@ -46,5 +52,8 @@ public class PlayerController : MonoBehaviour {
             rb2d.velocity = rb2d.velocity.x < 0 ? new Vector2(-maxRunSpeed, rb2d.velocity.y) : 
                 new Vector2(maxRunSpeed, rb2d.velocity.y);
         }
+
+        Animator animator = (Animator)this.GetComponent("Animator");
+        animator.speed = Mathf.Abs(rb2d.velocity.x/1.8f);
     }
 }
