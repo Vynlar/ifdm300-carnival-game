@@ -44,7 +44,7 @@ Shader "Sprites/Outline"
 
             #pragma vertex ComputeVertex
             #pragma fragment ComputeFragment
-            #pragma target 3.5
+            #pragma target 3.0
             #pragma multi_compile_instancing
             #pragma multi_compile _ PIXELSNAP_ON
             #pragma multi_compile _ ETC1_EXTERNAL_ALPHA
