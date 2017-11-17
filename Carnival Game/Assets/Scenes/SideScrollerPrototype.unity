@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7a590060cbab2c43be56c759e0365ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPickup: 1
+  isPickup: 0
   requiredObjects: []
   interactionSounds:
   - audioClip: {fileID: 8300000, guid: 6caa86978981040b8905f6a3ac78ee41, type: 3}
