@@ -48,8 +48,8 @@ public class InventoryUI : MonoBehaviour {
                 invImage.color = new Color(255, 255, 255, 255);
 
                 // Enables inspecting items in inventory
-                // Button slotButton = slot.GetComponent<Button>();
-                // slotButton.onClick.AddListener(obj.GetComponent<Dialogue>().TriggerDialog);
+                Button slotButton = slot.GetComponent<Button>();
+                slotButton.onClick.AddListener(obj.GetComponent<Dialogue>().TriggerDialog);
                 break;
             }
         }
@@ -75,7 +75,7 @@ public class InventoryUI : MonoBehaviour {
 
                 // Make the image color invisible so that it doesn't look ugly 
                 invImage.color = new Color(255, 255, 255, 0);
-                // slot.GetComponent<Button>().onClick.RemoveAllListeners();
+                slot.GetComponent<Button>().onClick.RemoveAllListeners();
                 break;
             }
         }
