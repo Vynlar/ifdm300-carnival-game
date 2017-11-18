@@ -9741,8 +9741,8 @@ MonoBehaviour:
   interactionSuccessTriggers:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1872296752}
-        m_MethodName: ActivateTeleport
+      - m_Target: {fileID: 1872296756}
+        m_MethodName: TriggerDialog
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
