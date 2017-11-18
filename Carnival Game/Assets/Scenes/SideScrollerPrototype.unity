@@ -1880,6 +1880,48 @@ GameObject:
   m_PrefabParentObject: {fileID: 1654880976114704, guid: 19184e72d5b0b9647accb404b02dd183,
     type: 2}
   m_PrefabInternal: {fileID: 1663912935}
+--- !u!114 &509923505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 509923504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c0929c255915c4c83a8622388eb4b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: description
+  dQueues:
+  - StateKey: description
+    dialogStatements:
+    - statement: "\u201C8/23 I wish I could say there was good news. That\u2019s what
+        the doctor told me, too."
+    - statement: Sharin and I had planned to go to the fall carnival next month. It
+        was always her favorite activity. The food, the games, and the apple cider.
+    - statement: I thought bringing it up might help her smile--all the memories we
+        have there together. And it did.
+    - statement: "But then she squeezed my hand and said, \u2018You\u2019ll go for
+        me, won\u2019t you?\u2019\u201D"
+    - statement: "It\u2019s signed with the initials BD."
+    dialogueActions:
+    - text: Done
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1290051032}
+            m_MethodName: HideDialogue
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
 --- !u!1 &518441585
 GameObject:
   m_ObjectHideFlags: 0
@@ -1908,6 +1950,7 @@ Transform:
   - {fileID: 1443414225}
   - {fileID: 1738635828}
   - {fileID: 2118134276}
+  - {fileID: 1997434238}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3681,6 +3724,11 @@ Prefab:
       propertyPath: interactionSounds.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4296369242822364, guid: 19184e72d5b0b9647accb404b02dd183, type: 2}
       propertyPath: m_LocalPosition.x
       value: -0.059214592
@@ -3775,6 +3823,36 @@ Prefab:
       propertyPath: m_Size.y
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: isPickup
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1862440145}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TriggerDialog
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19184e72d5b0b9647accb404b02dd183, type: 2}
   m_IsPrefabParent: 0
@@ -3788,6 +3866,51 @@ GameObject:
   m_PrefabParentObject: {fileID: 1654880976114704, guid: 19184e72d5b0b9647accb404b02dd183,
     type: 2}
   m_PrefabInternal: {fileID: 811126425}
+--- !u!114 &811126428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 811126427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c0929c255915c4c83a8622388eb4b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: description
+  dQueues:
+  - StateKey: description
+    dialogStatements:
+    - statement: "\"2/10 There\u2019s been no shortage of fun and excitement around
+        here. I\u2019ve been working hard to finish my next draft in time"
+    - statement: "for the critique group next week, and that\u2019s meant I\u2019ve
+        been working away in my basement office. I can hear Scruffy "
+    - statement: 'padding around all day upstairs--chasing his tail and who knows
+        what else until I surface or Sharin comes home, '
+    - statement: at which point either or both of us are covered with slobbery kisses.
+        And tonight when Sharin and I started a movie,
+    - statement: " that dog weaseled his way onto the couch on top of both our laps.
+        He\u2019s not a puppy any more, but he sure is here to stay. "
+    - statement: "Sharin and I both agree--he\u2019s a great addition to the family.\u201D"
+    - statement: "It\u2019s signed with the initials BD."
+    dialogueActions:
+    - text: Done
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1290051032}
+            m_MethodName: HideDialogue
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
 --- !u!1 &842246311
 GameObject:
   m_ObjectHideFlags: 0
@@ -4694,21 +4817,10 @@ MonoBehaviour:
     dialogStatements:
     - statement: "It\u2019s a small, well-polished key."
     dialogueActions:
-    - text: Pick Up
+    - text: Done
       action:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 865308947}
-            m_MethodName: AddItem
-            m_Mode: 2
-            m_Arguments:
-              m_ObjectArgument: {fileID: 1053401035}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
           - m_Target: {fileID: 1290051032}
             m_MethodName: HideDialogue
             m_Mode: 1
@@ -4718,17 +4830,6 @@ MonoBehaviour:
               m_IntArgument: 0
               m_FloatArgument: 0
               m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-          - m_Target: {fileID: 263229682}
-            m_MethodName: SetDialogState
-            m_Mode: 5
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: playerHas'Key'
               m_BoolArgument: 0
             m_CallState: 2
         m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -5833,6 +5934,11 @@ Prefab:
       propertyPath: interactionSounds.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4296369242822364, guid: 19184e72d5b0b9647accb404b02dd183, type: 2}
       propertyPath: m_LocalPosition.x
       value: -0.022544704
@@ -5927,6 +6033,36 @@ Prefab:
       propertyPath: m_Size.y
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: isPickup
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1862440145}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TriggerDialog
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19184e72d5b0b9647accb404b02dd183, type: 2}
   m_IsPrefabParent: 0
@@ -5940,6 +6076,50 @@ GameObject:
   m_PrefabParentObject: {fileID: 1654880976114704, guid: 19184e72d5b0b9647accb404b02dd183,
     type: 2}
   m_PrefabInternal: {fileID: 1209039716}
+--- !u!114 &1209039719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1209039718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c0929c255915c4c83a8622388eb4b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: description
+  dQueues:
+  - StateKey: description
+    dialogStatements:
+    - statement: "\u201C3/15 I have the chance to pitch to an agent next week. I\u2019ve
+        been wading through that mountain of manuscripts from last month"
+    - statement: when I asked my friends to look over my book. I think they must have
+        been competing to see who could use every last drop of red ink first.
+    - statement: "But, constructive feedback is the most valuable thing for a novel,
+        and I\u2019m getting excited. I just hope someone else finds 'Carnivals and
+        Creepers'"
+    - statement: "as interesting as Sharin and I do. It\u2019s been a lot of work
+        getting this book put together, but I\u2019m very proud of the result."
+    - statement: "Who would have thought that being a writer could be so fulfilling?\u201D"
+    - statement: "It\u2019s signed with the initials BD."
+    dialogueActions:
+    - text: Done
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1290051032}
+            m_MethodName: HideDialogue
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
 --- !u!1 &1229013486
 GameObject:
   m_ObjectHideFlags: 0
@@ -8295,6 +8475,11 @@ Prefab:
       propertyPath: interactionSounds.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4296369242822364, guid: 19184e72d5b0b9647accb404b02dd183, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0.044770718
@@ -8388,6 +8573,36 @@ Prefab:
         type: 2}
       propertyPath: m_Size.y
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: isPickup
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1862440145}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TriggerDialog
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19184e72d5b0b9647accb404b02dd183, type: 2}
@@ -9203,7 +9418,7 @@ Prefab:
     - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
         type: 2}
       propertyPath: interactionSounds.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
         type: 2}
@@ -9761,7 +9976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a7fabc7de8b6dd4ca3c419330e047e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 0}
+  dialogue: {fileID: 1872296756}
 --- !u!224 &1888032984 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
@@ -10005,6 +10220,271 @@ GameObject:
   m_PrefabParentObject: {fileID: 1182654890704468, guid: a50c98c1d7fe66846aaed5eadfd19565,
     type: 2}
   m_PrefabInternal: {fileID: 918831489}
+--- !u!1001 &1997434237
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 518441586}
+    m_Modifications:
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSounds.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4296369242822364, guid: 19184e72d5b0b9647accb404b02dd183, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 17.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4296369242822364, guid: 19184e72d5b0b9647accb404b02dd183, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -7.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 4296369242822364, guid: 19184e72d5b0b9647accb404b02dd183, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.15349585
+      objectReference: {fileID: 0}
+    - target: {fileID: 4296369242822364, guid: 19184e72d5b0b9647accb404b02dd183, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4296369242822364, guid: 19184e72d5b0b9647accb404b02dd183, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4296369242822364, guid: 19184e72d5b0b9647accb404b02dd183, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4296369242822364, guid: 19184e72d5b0b9647accb404b02dd183, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4296369242822364, guid: 19184e72d5b0b9647accb404b02dd183, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 212316582585900116, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1335256297
+      objectReference: {fileID: 0}
+    - target: {fileID: 212316582585900116, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 212316582585900116, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1587a24b1a0f56844afcc2a83cd592ea,
+        type: 3}
+    - target: {fileID: 4296369242822364, guid: 19184e72d5b0b9647accb404b02dd183, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 3.0643222
+      objectReference: {fileID: 0}
+    - target: {fileID: 4296369242822364, guid: 19184e72d5b0b9647accb404b02dd183, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.4756397
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654880976114704, guid: 19184e72d5b0b9647accb404b02dd183, type: 2}
+      propertyPath: m_Name
+      value: DroppedNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 4296369242822364, guid: 19184e72d5b0b9647accb404b02dd183, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 3.73047
+      objectReference: {fileID: 0}
+    - target: {fileID: 61291433454690022, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61291433454690022, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSounds.Array.data[0].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6caa86978981040b8905f6a3ac78ee41, type: 3}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSounds.Array.data[0].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 61291433454690022, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 61291433454690022, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: isPickup
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1997434240}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TriggerDialog
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896954707426178, guid: 19184e72d5b0b9647accb404b02dd183,
+        type: 2}
+      propertyPath: interactionSuccessTriggers.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 19184e72d5b0b9647accb404b02dd183, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1997434238 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4296369242822364, guid: 19184e72d5b0b9647accb404b02dd183,
+    type: 2}
+  m_PrefabInternal: {fileID: 1997434237}
+--- !u!1 &1997434239 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1654880976114704, guid: 19184e72d5b0b9647accb404b02dd183,
+    type: 2}
+  m_PrefabInternal: {fileID: 1997434237}
+--- !u!114 &1997434240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1997434239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c0929c255915c4c83a8622388eb4b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: descriptionPickUp
+  dQueues:
+  - StateKey: descriptionPickUp
+    dialogStatements:
+    - statement: "It\u2019s another page of paper with the same, slanted handwriting
+        that looks as though it was torn out of a book."
+    - statement: "It reads, \u201CI\u2019ve searched everywhere. The only way out
+        of this darkness must be the mirror. But I\u2019ve decided already--I like
+        it here more."
+    - statement: And I want to make sure that everyone who comes here feels comfortable
+        and can forget the awful realities out there.
+    - statement: ' Here, there is room for everyone, and we can live without that
+        pain."'
+    - statement: Signed, Bryan Dowey.
+    dialogueActions:
+    - text: Pick Up
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1290051032}
+            m_MethodName: HideDialogue
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 865308947}
+            m_MethodName: AddItem
+            m_Mode: 2
+            m_Arguments:
+              m_ObjectArgument: {fileID: 1997434239}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 1997434240}
+            m_MethodName: SetDialogState
+            m_Mode: 5
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: description
+              m_BoolArgument: 0
+            m_CallState: 2
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+    - text: Done
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1290051032}
+            m_MethodName: HideDialogue
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+  - StateKey: description
+    dialogStatements:
+    - statement: 'Tidy, slanted handwriting fills the page of loose paper on the ground.
+        It looks like it was torn from a book or journal of sorts. '
+    - statement: "It reads, \u201C9/15 Last I remember I was at the carnival. Now\u2026
+        Everything is dark. I\u2019m alone, but the emptiness is somehow soothing."
+    - statement: "The only marking I can find is on a door marked \u2018Exit.\u2019
+        It\u2019s strangely fitting. The room beyond is not much to call home, "
+    - statement: "but then again, there\u2019s not much to go back to, anyhow. Maybe
+        time to start rebuilding.\u201D"
+    - statement: "It\u2019s signed with the initials BD."
+    dialogueActions:
+    - text: Done
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1290051032}
+            m_MethodName: HideDialogue
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
 --- !u!1001 &2028467254
 Prefab:
   m_ObjectHideFlags: 0
