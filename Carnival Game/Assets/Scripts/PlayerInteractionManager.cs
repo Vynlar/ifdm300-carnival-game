@@ -103,7 +103,6 @@ public class PlayerInteractionManager : MonoBehaviour {
         {
             InteractionObject interObj = focusedObject.GetComponent<InteractionObject>();
             bool meetsRequirements = playerInventory.CheckIfContainsRequiredItems(interObj.requiredObjects);
-            // Debug.Log("player meets requirements for " + interObj.name + ": " + meetsRequirements);
             if (interObj.OnInteract(meetsRequirements))
             {
                 if (interObj.isPickup)

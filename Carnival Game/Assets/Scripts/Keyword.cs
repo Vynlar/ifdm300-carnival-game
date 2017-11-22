@@ -13,7 +13,6 @@ public class Keyword : MonoBehaviour {
     public RectTransform inputPanel;
 
     private InputField inputField;
-    private Text inputText;
     private Text placeHolderText;
     private Button doneButton;
 
@@ -21,7 +20,6 @@ public class Keyword : MonoBehaviour {
 	void Start () {
         inputPanel.gameObject.SetActive(false);
         inputField = inputPanel.transform.Find("InputPanel/InputField").gameObject.GetComponent<InputField>();
-        inputText = inputField.transform.Find("Text").gameObject.GetComponent<Text>();
         placeHolderText = inputField.transform.Find("Placeholder").gameObject.GetComponent<Text>();
         doneButton = inputPanel.transform.Find("DoneButton").GetComponent<Button>();
     }
@@ -33,19 +31,22 @@ public class Keyword : MonoBehaviour {
 
     public void ShowInput()
     {
+        // Enable the panel, and clean out any previous text
         inputPanel.gameObject.SetActive(true);
         inputField.text = "";
-
-        doneButton.onClick.RemoveAllListeners();
         inputField.characterLimit = expectedWord.Length;
         placeHolderText.text = "Enter a " + expectedWord.Length + " letter word";
+
+        // Remove all old listeners, and add the listener to Validate
+        // the input 
+        doneButton.onClick.RemoveAllListeners();
         doneButton.onClick.AddListener(Validate);
     }
 
     public void Validate()
     {
         
-        if(inputText.text.ToLower() == expectedWord.ToLower())
+        if(inputField.text.ToLower() == expectedWord.ToLower())
         {
             succeed.Invoke();
         }
