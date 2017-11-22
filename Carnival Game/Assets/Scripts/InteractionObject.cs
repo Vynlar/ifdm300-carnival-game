@@ -90,14 +90,12 @@ public class InteractionObject : MonoBehaviour {
 
     private void InteractFailure()
     {
-        // Debug.Log("Interaction Failure!");
         // Invoke specified interaction failure methods
         interactionFailTriggers.Invoke();
     }
 
     private void InteractSuccess()
     {
-        // Debug.Log("Interaction Success!");
         // Play all interaction sounds.
         if (interactionSounds.Length > 0)
         {

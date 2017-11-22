@@ -23,10 +23,8 @@ public class DialogueManager : MonoBehaviour {
     // Reference to player 
     public PlayerController pController;
 
-
     // The buttons for each dialogue action
     private List<Button> dialogueActionsText;
-
 
     // Text conversation to play
     private Dialogue.DialogueList currentConversation;
