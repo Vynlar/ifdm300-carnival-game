@@ -61,6 +61,7 @@ public class PlayerInteractionManager : MonoBehaviour {
             {
                 SpriteGlow.SpriteGlow sGlow = focusedObject.AddComponent<SpriteGlow.SpriteGlow>();
                 sGlow.GlowColor = itemHighlightColor;
+                sGlow.OutlineWidth = 8;
             }
             if(prevFocusedObject != null)
             {
