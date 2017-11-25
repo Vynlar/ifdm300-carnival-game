@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour {
         }
 
 
-        if(Mathf.Abs(rb2d.velocity.x) > 0.2)
+        if(Mathf.Abs(rb2d.velocity.x) > 0.25)
         {
             GetComponent<SpriteRenderer>().flipX = false;
             animator.SetBool("walk", true);
