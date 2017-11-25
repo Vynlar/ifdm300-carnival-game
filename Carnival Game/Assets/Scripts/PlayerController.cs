@@ -11,11 +11,14 @@ public class PlayerController : MonoBehaviour {
     private Rigidbody2D rb2d; // Character's rigidbody
     private PlayerInteractionManager playerIM; // InteractionManager
 
+    private Animator animator;
+
     bool controlsEnabled = true;
 
     void Awake()
     {
         // Get component references
+        animator = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
         playerIM = GetComponent<PlayerInteractionManager>();
     }
@@ -61,8 +64,18 @@ public class PlayerController : MonoBehaviour {
                 new Vector2(maxRunSpeed, rb2d.velocity.y);
         }
 
-        Animator animator = (Animator)this.GetComponent("Animator");
-        animator.speed = Mathf.Abs(rb2d.velocity.x/1.8f);
+
+        if(Mathf.Abs(rb2d.velocity.x) > 0.2)
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
+            animator.SetBool("walk", true);
+            animator.speed = Mathf.Abs(rb2d.velocity.x/1.8f);
+        }
+        else
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
+            animator.SetBool("walk", false);
+        }
     }
 
     public void SetControlsEnabled(bool isEnabled)
