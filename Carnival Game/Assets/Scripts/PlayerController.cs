@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour {
     private Rigidbody2D rb2d; // Character's rigidbody
     private PlayerInteractionManager playerIM; // InteractionManager
 
+    bool controlsEnabled = true;
+
     void Awake()
     {
         // Get component references
@@ -20,10 +22,13 @@ public class PlayerController : MonoBehaviour {
 
     private void Update()
     {
-        // Test for interaction input
-        if (Input.GetButtonDown("Interact"))
+        if(controlsEnabled)
         {
-            playerIM.Interact();
+            // Test for interaction input
+            if (Input.GetButtonDown("Interact"))
+            {
+                playerIM.Interact();
+            }
         }
     }
 
@@ -31,19 +36,22 @@ public class PlayerController : MonoBehaviour {
     void FixedUpdate () {
 
         // Check for left and right input 
-        if (Input.GetKey(KeyCode.D))
+        if(controlsEnabled)
         {
-            rb2d.AddForce(new Vector2(runSpeed, 0));
-            Vector2 newScale = this.transform.localScale;
-            newScale.x = Mathf.Abs(newScale.x);
-            this.transform.localScale = newScale;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            rb2d.AddForce(new Vector2(-runSpeed, 0));
-            Vector2 newScale = this.transform.localScale;
-            newScale.x = -Mathf.Abs(newScale.x);
-            this.transform.localScale = newScale;
+            if (Input.GetKey(KeyCode.D))
+            {
+                rb2d.AddForce(new Vector2(runSpeed, 0));
+                Vector2 newScale = this.transform.localScale;
+                newScale.x = Mathf.Abs(newScale.x);
+                this.transform.localScale = newScale;
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                rb2d.AddForce(new Vector2(-runSpeed, 0));
+                Vector2 newScale = this.transform.localScale;
+                newScale.x = -Mathf.Abs(newScale.x);
+                this.transform.localScale = newScale;
+            }
         }
 
         // Cap the run speed
@@ -55,5 +63,15 @@ public class PlayerController : MonoBehaviour {
 
         Animator animator = (Animator)this.GetComponent("Animator");
         animator.speed = Mathf.Abs(rb2d.velocity.x/1.8f);
+    }
+
+    public void SetControlsEnabled(bool isEnabled)
+    {
+        controlsEnabled = isEnabled;
+    }
+
+    public bool ControlsEnabled()
+    {
+        return controlsEnabled;
     }
 }

@@ -48,12 +48,19 @@ public class Keyword : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
-        if(!isTyping)
+        if(!isTyping || !basePanel.gameObject.activeSelf)
         {
+            // We aren't typing the keyword, or the panel isn't active, so return
             return;
         }
 
-		if(Input.anyKeyDown)
+        // Disable player input if it is enabled
+        if (DialogueManager.Instance.pController.ControlsEnabled())
+        {
+            DialogueManager.Instance.pController.SetControlsEnabled(false);
+        }
+
+        if (Input.anyKeyDown)
         {
             char inChar = '=';
             if(Input.inputString != "")
@@ -107,16 +114,11 @@ public class Keyword : MonoBehaviour {
 
     public void ShowInput()
     {
-        // Clean out any previous charPanels and put in new ones.
-        ClearCharPanels();
+        // Disable the player controller
+        DialogueManager.Instance.pController.SetControlsEnabled(false);
 
-        // Add in new char panels
-        for(int i = 0; i < expectedWord.Length; i++)
-        {
-            GameObject charP = Instantiate(charPanelPrefab, charPanelGroup, false);
-            charPanels.Add(charP);
-            charPanelText.Add(charP.transform.Find("Elements/Character").GetComponent<Text>());
-        }
+        // Clean out any previous charPanels and put in new ones.
+        RepopulateCharPanels();
 
         // Enable the panel
         basePanel.gameObject.SetActive(true);
@@ -148,6 +150,12 @@ public class Keyword : MonoBehaviour {
         basePanel.gameObject.SetActive(false);
         isTyping = false;
         enteredKeyword = "";
+
+        // Re-enable controls only if there's no dialog playing
+        if(!DialogueManager.Instance.dialoguePanel.activeSelf)
+        {
+            DialogueManager.Instance.pController.SetControlsEnabled(true);
+        }
     }
 
     private void ClearCharPanels()
@@ -162,5 +170,25 @@ public class Keyword : MonoBehaviour {
         charPanelText.Clear();
 
         currentCharIndex = 0;
+    }
+
+    private void RepopulateCharPanels()
+    {
+        ClearCharPanels();
+
+        // Add in new char panels
+        for (int i = 0; i < expectedWord.Length; i++)
+        {
+            GameObject charP = Instantiate(charPanelPrefab, charPanelGroup, false);
+            charPanels.Add(charP);
+            charPanelText.Add(charP.transform.Find("Elements/Character").GetComponent<Text>());
+        }
+
+    }
+
+    public void SetExpectedWord(string word)
+    {
+        expectedWord = word;
+        RepopulateCharPanels();
     }
 }

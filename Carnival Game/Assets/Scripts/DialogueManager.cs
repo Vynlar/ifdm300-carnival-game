@@ -62,10 +62,14 @@ public class DialogueManager : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        if(isPlaying && pController.ControlsEnabled())
+        {
+            pController.SetControlsEnabled(false);
+        }
 
         if (isPlaying && Input.GetButtonDown("Interact"))
         {
-
+            
             // Finish up showing dialogue and return
             if(isRolling)
             {
@@ -129,7 +133,7 @@ public class DialogueManager : MonoBehaviour {
         }
 
         // disable player controls while dialogue is happening
-        pController.enabled = false;
+        pController.SetControlsEnabled(false);
 
         // Check if we're alraedy at the end (dialogue count is only one)
         if (statementIndex == currentConversation.dialogStatements.Count - 1 && !isRolling)
@@ -169,7 +173,7 @@ public class DialogueManager : MonoBehaviour {
         isPlaying = false;
         goingToPlay = false;
         dialoguePanel.SetActive(false);
-        pController.enabled = true;
+        pController.SetControlsEnabled(true);
     }
 
 }
