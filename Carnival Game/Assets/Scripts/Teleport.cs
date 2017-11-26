@@ -96,4 +96,9 @@ public class Teleport : MonoBehaviour {
         }
     }
 
+	public void setTeleportLocation(GameObject go)
+	{
+		teleportTo = go;
+	}
+
 }
