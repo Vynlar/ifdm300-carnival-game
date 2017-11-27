@@ -32,19 +32,24 @@ public class Keyword : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        charPanels = new List<GameObject>();
-        charPanelText = new List<Text>();
-
-        // make the panel invisable on start
-        basePanel.gameObject.SetActive(false);
-
-        // Clean out any existing character panels
-        ClearCharPanels();
-
-        // Get the references to the UI elements that we need
-        doneButton = basePanel.transform.Find("DoneButton").GetComponent<Button>();
+		initializeAsNew();
     }
 
+	void initializeAsNew()
+	{
+		charPanels = new List<GameObject>();
+		charPanelText = new List<Text>();
+
+		// make the panel invisable on start
+		basePanel.gameObject.SetActive(false);
+
+		// Clean out any existing character panels
+		ClearCharPanels();
+
+		// Get the references to the UI elements that we need
+		doneButton = basePanel.transform.Find("DoneButton").GetComponent<Button>();
+	}
+		
     // Update is called once per frame
     void Update () {
 
@@ -141,6 +146,7 @@ public class Keyword : MonoBehaviour {
         if(enteredKeyword.ToUpper() == expectedWord.ToUpper())
         {
             succeed.Invoke();
+			initializeAsNew();
         }
         else
         {

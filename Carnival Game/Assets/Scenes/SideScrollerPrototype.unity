@@ -1078,7 +1078,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 241201595}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -452.83078, y: 130.83542, z: 0}
+  m_LocalPosition: {x: -438.42255, y: 139.20288, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1855266981}
@@ -1703,7 +1703,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 357945296}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.03, y: -55.73, z: -10}
+  m_LocalPosition: {x: -9.8, y: -55.73, z: -10}
   m_LocalScale: {x: 0.8561923, y: 0.8561921, z: 0.8561921}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2090,8 +2090,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 403934158}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 416.016, y: 88.474014, z: 0.28894457}
-  m_LocalScale: {x: 2.1154475, y: 2.115448, z: 2.115448}
+  m_LocalPosition: {x: 111.063095, y: -58.3552, z: 0.28894457}
+  m_LocalScale: {x: 1.5019937, y: 1.5019941, z: 1.5019941}
   m_Children:
   - {fileID: 606485796}
   - {fileID: 241201596}
@@ -2907,7 +2907,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 606485795}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 121.2258, y: 163.54541, z: 0}
+  m_LocalPosition: {x: 117.49759, y: 171.91287, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1122093262}
@@ -3322,7 +3322,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 703337474}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 286.29892, y: -73.66, z: 0}
+  m_LocalPosition: {x: 277.3117, y: -73.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 606485796}
@@ -4632,7 +4632,7 @@ Prefab:
     - target: {fileID: 224980117017058540, guid: 5b5f22b7989765d44aedaf1650ed07a4,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.5983582
+      value: -2.6820374
       objectReference: {fileID: 0}
     - target: {fileID: 224980117017058540, guid: 5b5f22b7989765d44aedaf1650ed07a4,
         type: 2}
@@ -4727,7 +4727,7 @@ Prefab:
     - target: {fileID: 224380199551994916, guid: 5b5f22b7989765d44aedaf1650ed07a4,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -44.420906
+      value: -45.815475
       objectReference: {fileID: 0}
     - target: {fileID: 224876441471905386, guid: 5b5f22b7989765d44aedaf1650ed07a4,
         type: 2}
@@ -4742,7 +4742,7 @@ Prefab:
     - target: {fileID: 224857053913052608, guid: 5b5f22b7989765d44aedaf1650ed07a4,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 49.540905
+      value: 50.93548
       objectReference: {fileID: 0}
     - target: {fileID: 224838941114613146, guid: 5b5f22b7989765d44aedaf1650ed07a4,
         type: 2}
@@ -4752,7 +4752,7 @@ Prefab:
     - target: {fileID: 224838941114613146, guid: 5b5f22b7989765d44aedaf1650ed07a4,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5.1200027
+      value: 5.119999
       objectReference: {fileID: 0}
     - target: {fileID: 224380199551994916, guid: 5b5f22b7989765d44aedaf1650ed07a4,
         type: 2}
@@ -6311,7 +6311,7 @@ MonoBehaviour:
   - StateKey: done
     dialogStatements:
     - statement: "For a kid who says nothin\u2019, you sure kow how to pull the heartstrings.
-        Thanks for reminding me about my daughter, kid."
+        Thanks for reminding me about my daughta'."
     dialogueActions:
     - text: Done
       action:
@@ -6515,7 +6515,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1122093261}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -257.7099, y: 67.194, z: 0}
+  m_LocalPosition: {x: -249.6214, y: 67.194, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 606485796}
@@ -7838,6 +7838,17 @@ MonoBehaviour:
               m_StringArgument: secondPuzzleHint
               m_BoolArgument: 0
             m_CallState: 2
+          - m_Target: {fileID: 1997434244}
+            m_MethodName: Enable
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
         m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
   - StateKey: finalConversationAfterUnlock
@@ -8973,7 +8984,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1444232749}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 416.016, y: 88.474014, z: 0.28894457}
+  m_LocalPosition: {x: 111.063095, y: -58.3552, z: 0.28894457}
   m_LocalScale: {x: 1.8824253, y: 1.8824259, z: 1.8824259}
   m_Children: []
   m_Father: {fileID: 558855357}
@@ -9271,10 +9282,9 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
   - StateKey: hint
     dialogStatements:
-    - statement: 'If you want a balloon animal, there might be one around here somewhere.
-        I kinda ran out of balloons recently. '
-    - statement: "But, you know. YOLO! Maybe I\u2019ll start making \u2018m out of
-        socks."
+    - statement: 'If you want a balloon animal, there might be one around here somewhere. '
+    - statement: "I leave \u2018m around sometimes, you know, just in case someone
+        wants one. Sometimes I even stick surprises inside."
     dialogueActions:
     - text: Done
       action:
@@ -9295,10 +9305,9 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
   - StateKey: hintOptionalTurnin
     dialogStatements:
-    - statement: 'If you want a balloon animal, there might be one around here somewhere.
-        I kinda ran out of balloons recently. '
-    - statement: "But, you know. YOLO! Maybe I\u2019ll start making \u2018m out of
-        socks."
+    - statement: 'If you want a balloon animal, there might be one around here somewhere. '
+    - statement: "I leave \u2018m around sometimes, you know, just in case someone
+        wants one. Sometimes I even stick surprises inside."
     dialogueActions:
     - text: Give Detention Slip
       action:
@@ -9385,6 +9394,7 @@ MonoBehaviour:
         times."
     - statement: The teacher was so convinced that there was witchcraft going on.
         It was hilarious--and so worth the detention.
+    - statement: Now that is a good friend. Thanks for reminding me.
     dialogueActions:
     - text: Done
       action:
@@ -9410,6 +9420,7 @@ MonoBehaviour:
         chairs"
     - statement: and had strings we could pull to pop them at random times. The teacher
         was so convinced that there was witchcraft going on. It was hilarious.
+    - statement: Now, that guy, he was a good friend.
     - statement: Oh, here, maybe you can use this.
     dialogueActions:
     - text: Done
@@ -10239,9 +10250,10 @@ MonoBehaviour:
     dialogStatements:
     - statement: "I was expecting you\u2019d be here\u2026. Well, mostly. You\u2019re
         a little shorter than I thought you were going to be. Do you want to see your
-        fortune? I\u2019ve gotten pretty good at it after all this time. "
-    - statement: I only seem to miss minor details. I bet I can tell you what the
-        weather is going to be like tomorrow!
+        fortune, young one? "
+    - statement: "I\u2019ve gotten pretty good at it after all this time. I only seem
+        to miss minor details."
+    - statement: I bet I can tell you what the weather is going to be like tomorrow!
     dialogueActions:
     - text: Done
       action:
@@ -10273,13 +10285,12 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
   - StateKey: hint
     dialogStatements:
-    - statement: "I think I would be better at telling the future if I had a crystal
-        ball\u2026 That\u2019s what all the professionals use, right? Then I could
-        gamble at the horse races. "
-    - statement: "And use it at all the casinos. Maybe then my mother would be satisfied\u2026
-        I spend a lot of time trying to make sure she\u2019s taken care of, but she
-        never seems to appreciate it. "
-    - statement: "So, forget the crystal ball. Let\u2019s just go for a lucky spin."
+    - statement: 'I feel like I used to have a lucky streak, but I guess I lost it
+        somehow. '
+    - statement: 'But even when I had it, nothing I did was enough for my mother.
+        I spent a lot of time trying to make sure she was taken care of, '
+    - statement: but she never seemed to appreciate it. But that is past now. Yet,
+        I still cannot shake the feeling that I have misplaced something.
     dialogueActions:
     - text: Done
       action:
@@ -10300,13 +10311,12 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
   - StateKey: hintOptionalTurnin
     dialogStatements:
-    - statement: "I think I would be better at telling the future if I had a crystal
-        ball\u2026 That\u2019s what all the professionals use, right? Then I could
-        gamble at the horse races. "
-    - statement: "And use it at all the casinos. Maybe then my mother would be satisfied\u2026
-        I spend a lot of time trying to make sure she\u2019s taken care of, but she
-        never seems to appreciate it. "
-    - statement: "So, forget the crystal ball. Let\u2019s just go for a lucky spin."
+    - statement: 'I feel like I used to have a lucky streak, but I guess I lost it
+        somehow. '
+    - statement: 'But even when I had it, nothing I did was enough for my mother.
+        I spent a lot of time trying to make sure she was taken care of, '
+    - statement: but she never seemed to appreciate it. But that is past now. Yet,
+        I still cannot shake the feeling that I have misplaced something.
     dialogueActions:
     - text: Give Lucky Dice
       action:
@@ -10388,8 +10398,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
   - StateKey: done
     dialogStatements:
-    - statement: "My mother gave me these lucky dice. I\u2019d almost forgotten them!
-        I guess searching the future can cause forgetfulness as well as foresight."
+    - statement: "My mother gave me these lucky dice, and I\u2019d forgotten about
+        them. I guess searching the future can cause forgetfulness as well as foresight."
     - statement: Thanks for getting them back to me.
     dialogueActions:
     - text: Done
@@ -10411,11 +10421,11 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
   - StateKey: solved
     dialogStatements:
-    - statement: "Oh, what are these? \u2026 Dice \u2026 My dice? These are my lucky
-        dice! My mother gave these. "
-    - statement: "Thank you, young one. I didn\u2019t anticipate this, but sometimes
-        the stars tell the past as well as the future, and you seemed to read them
-        quite well. "
+    - statement: "Oh, what are these? \u2026 Dice \u2026 "
+    - statement: 'My dice? These are my lucky dice! My mother gave me these. '
+    - statement: Thank you, young one. I didn't anticipate this, but sometimes the
+        stars tell the past as well as the future, and you seemed to read them quite
+        well.
     - statement: "Oh, I found this note a long time ago. Something tells me you\u2019ll
         need it."
     dialogueActions:
@@ -11318,7 +11328,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4345930879777436, guid: ee4de2966f9bad140b8eb1c498fd9057, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -9.3
+      value: -13.14
       objectReference: {fileID: 0}
     - target: {fileID: 4345930879777436, guid: ee4de2966f9bad140b8eb1c498fd9057, type: 2}
       propertyPath: m_LocalPosition.y
