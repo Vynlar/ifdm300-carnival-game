@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour {
     {
         if (isStart)
         {
-            SceneManager.LoadScene("SideScrollerPrototype");
+            SceneManager.LoadScene("CutScene");
         }
         if (isQuit)
         {
