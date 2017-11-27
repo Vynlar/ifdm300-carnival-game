@@ -166,9 +166,9 @@ public class Keyword : MonoBehaviour {
 
     private void ClearCharPanels()
     {
-        foreach (GameObject go in charPanels)
+        foreach(Transform child in charPanelGroup.transform)
         {
-            Destroy(go);
+            Destroy(child.gameObject);
         }
         charPanels.Clear();
 
