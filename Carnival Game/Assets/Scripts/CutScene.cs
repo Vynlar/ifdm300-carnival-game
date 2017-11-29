@@ -4,39 +4,21 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class CutScene : MonoBehaviour {
-
-    public Texture2D[] mSprites;
-    private Texture2D currentSprite;
-    private int counter;
-    public float switchTime = 0.5f;
-
-    public Rect r_Sprite;
+    public float endTime = 12.0f;
+    float timer = 0.0f;
 
     void Start()
     {
-        counter = 0;
-        StartCoroutine("SwitchSprite");
+        
     }
 
-    void OnGUI()
+    void Update()
     {
-        GUI.DrawTexture(r_Sprite, currentSprite);
-    }
-
-    private IEnumerator SwitchSprite()
-    {
-
-        if (counter < mSprites.Length)
-        {
-            currentSprite = mSprites[counter];
-            counter++;
-        }
-        else
+        if(timer >= endTime)
         {
             SceneManager.LoadScene("SideScrollerPrototype");
         }
-
-        yield return new WaitForSeconds(switchTime);
-        StartCoroutine("SwitchSprite");
+        timer += Time.deltaTime;
     }
+
 }
