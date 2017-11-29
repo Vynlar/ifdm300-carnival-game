@@ -32,6 +32,11 @@ public class PlayerController : MonoBehaviour {
             {
                 playerIM.Interact();
             }
+
+            if(Input.GetKeyDown(KeyCode.Escape))
+            {
+                Application.Quit();
+            }
         }
     }
 
