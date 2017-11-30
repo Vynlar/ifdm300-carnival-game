@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class Teleport : MonoBehaviour {
@@ -10,6 +11,8 @@ public class Teleport : MonoBehaviour {
     public BoxCollider2D switchBoundingBoxTo = null;
     public float fadeTime = 0.5f;
 
+    [Tooltip("What to do after teleporting")]
+    public UnityEvent onTeleport;
     // Image used to fade between scenes
     private Image fadeImage;
 
@@ -71,6 +74,7 @@ public class Teleport : MonoBehaviour {
         fadeImage.color = new Color(0, 0, 0, 0);
         // We've finished fading, so teleport the player
         objToTeleport.transform.position = teleportTo.transform.position;
+        onTeleport.Invoke();
 
         // Then change the bounding box
         if (switchBoundingBoxTo != null)
