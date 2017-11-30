@@ -9,6 +9,7 @@ public class EnableDisableScript : MonoBehaviour {
 	private Renderer rend;
 	private BoxCollider2D co2d;
 	private ColliderReference colidRef;
+	private EnableDisableScript glowScript;
 
 	// Use this for initialization
 	void Start () 
@@ -16,6 +17,10 @@ public class EnableDisableScript : MonoBehaviour {
 		rend = GetComponent<Renderer>();
 		co2d = GetComponent<BoxCollider2D>();
 		colidRef = GetComponent<ColliderReference> ();
+		GameObject glowObj = GameObject.Find(this.name+"Glow");
+		if(glowObj!=null)glowScript = (EnableDisableScript) glowObj.GetComponent("EnableDisableScript");
+			
+		
 		if (disabled)
 			Disable ();
 		else
@@ -24,17 +29,17 @@ public class EnableDisableScript : MonoBehaviour {
 
 	public void Enable()
 	{
-		rend.enabled = (true);
-		co2d.enabled = (true);
-		if(colidRef != null) 
-			colidRef.EnableCollider ();
+		if(rend!=null) rend.enabled = (true);
+		if(co2d!=null) co2d.enabled = (true);
+		if(colidRef != null) colidRef.EnableCollider ();
+		if(glowScript != null) glowScript.Enable();
 	}
 		
 	public void Disable()
 	{
-		rend.enabled = (false);
-		co2d.enabled = (false);
-		if(colidRef != null) 
-			colidRef.DisableCollider ();
+		if(rend!=null) rend.enabled = (false);
+		if(co2d!=null) co2d.enabled = (false);
+		if(colidRef != null) colidRef.DisableCollider ();
+		if(glowScript != null) glowScript.Disable();
 	}
 }
