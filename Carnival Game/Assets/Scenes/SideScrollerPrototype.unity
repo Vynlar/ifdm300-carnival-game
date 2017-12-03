@@ -5206,8 +5206,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1451927355
-  m_SortingLayer: 3
+  m_SortingLayerID: -1335256297
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: aed617cb0f6e9494898e230600dcbc0c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5805,7 +5805,7 @@ Prefab:
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
@@ -6867,8 +6867,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1495126767
-  m_SortingLayer: 1
+  m_SortingLayerID: -1335256297
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 424eb495662f00b4d8a42e278ffb30c0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6921,7 +6921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0929614a575052f47b35feaaebe9a540, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  disabled: 0
+  disabled: 1
 --- !u!212 &881131837
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7450,7 +7450,7 @@ Prefab:
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
@@ -7826,7 +7826,7 @@ Prefab:
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -116.331924
       objectReference: {fileID: 0}
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
@@ -8166,8 +8166,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1495126767
-  m_SortingLayer: 1
+  m_SortingLayerID: -1335256297
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 424eb495662f00b4d8a42e278ffb30c0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -9204,7 +9204,7 @@ MonoBehaviour:
         without any work or effort! '
     - statement: "You can\u2019t do that out there! Why would you ever want to leave?"
     dialogueActions:
-    - text: But what about...
+    - text: But don't you remember, you were a...
       action:
         m_PersistentCalls:
           m_Calls:
@@ -10630,7 +10630,7 @@ Prefab:
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
@@ -13872,7 +13872,7 @@ Prefab:
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
@@ -18978,7 +18978,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8f993080301d4f048a8e4f0015c3444c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.52205884, g: 0.11132138, b: 0.11132138, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -19325,7 +19325,7 @@ Prefab:
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
@@ -19887,7 +19887,7 @@ Prefab:
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
@@ -20880,7 +20880,7 @@ MonoBehaviour:
         away in an instant. Death favors no one. '
     - statement: At least let me protect you from that pain.
     dialogueActions:
-    - text: But what about...
+    - text: But what about your...
       action:
         m_PersistentCalls:
           m_Calls:
@@ -21047,7 +21047,7 @@ Prefab:
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -116.331924
       objectReference: {fileID: 0}
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
