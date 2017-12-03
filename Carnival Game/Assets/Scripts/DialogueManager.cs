@@ -41,8 +41,12 @@ public class DialogueManager : MonoBehaviour {
     // is the dialogue text still rolling? 
     private bool isRolling = false;
 
+    // Button that is focused (for keys)
+    private int focusedButtonIndex = 0;
+
 	// Use this for initialization
 	void Awake () {
+
         // Make sure there is only one instance 
 		if(Instance == null)
         {
@@ -62,7 +66,7 @@ public class DialogueManager : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if(isPlaying && pController.ControlsEnabled())
+        if (isPlaying && pController.ControlsEnabled())
         {
             pController.SetControlsEnabled(false);
         }
@@ -80,11 +84,7 @@ public class DialogueManager : MonoBehaviour {
                 // We are on the last dialogue frame
                 if (statementIndex == currentConversation.dialogStatements.Count - 1)
                 {
-                    foreach (Button button in dialogueActionsText)
-                    {
-                        button.gameObject.transform.SetParent(GameObject.Find("ActionPanel").transform, false);
-                        button.gameObject.transform.localScale = new Vector3(1, 1, 1);
-                    }
+                    SetUpButtons();
                 }
                 return;
             }
@@ -94,12 +94,14 @@ public class DialogueManager : MonoBehaviour {
                 StopAllCoroutines();
                 StartCoroutine(RollDialog());
             }
-
         }
         else if (goingToPlay && !isPlaying)
         {
             isPlaying = true;
         }
+
+        HandleKeySelectionInput();
+
     }
 
     public void SetDialogSequence(Dialogue.DialogueList sequence)
@@ -138,12 +140,7 @@ public class DialogueManager : MonoBehaviour {
         // Check if we're alraedy at the end (dialogue count is only one)
         if (statementIndex == currentConversation.dialogStatements.Count - 1 && !isRolling)
         {
-            foreach (Button button in dialogueActionsText)
-            {
-                button.gameObject.transform.SetParent(GameObject.Find("ActionPanel").transform, false);
-                button.gameObject.transform.localScale = new Vector3(0, 0, 0);
-            }
-
+            SetUpButtons();
         }
     }
     IEnumerator RollDialog()
@@ -160,11 +157,7 @@ public class DialogueManager : MonoBehaviour {
         // We are on the last dialogue frame
         if (statementIndex == currentConversation.dialogStatements.Count - 1)
         {
-            foreach (Button button in dialogueActionsText)
-            {
-                button.gameObject.transform.SetParent(GameObject.Find("ActionPanel").transform, false);
-                button.gameObject.transform.localScale = new Vector3(1, 1, 1);
-            }
+            SetUpButtons();
         }
     }
 
@@ -176,4 +169,61 @@ public class DialogueManager : MonoBehaviour {
         pController.SetControlsEnabled(true);
     }
 
+    private void SetUpButtons()
+    {
+        foreach (Button button in dialogueActionsText)
+        {
+            button.gameObject.transform.SetParent(GameObject.Find("ActionPanel").transform, false);
+            button.gameObject.transform.localScale = new Vector3(1, 1, 1);
+        }
+        focusedButtonIndex = 0;
+        dialogueActionsText[focusedButtonIndex].targetGraphic.color =
+            dialogueActionsText[focusedButtonIndex].colors.highlightedColor;
+
+    }
+
+    private void HandleKeySelectionInput()
+    {
+        if(dialogueActionsText.Count == 0)
+        {
+            return;
+        }
+
+        if (isPlaying && statementIndex == currentConversation.dialogStatements.Count - 1 && !isRolling)
+        {
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                dialogueActionsText[focusedButtonIndex].targetGraphic.color =
+                     dialogueActionsText[focusedButtonIndex].colors.normalColor;
+
+                focusedButtonIndex--;
+                if (focusedButtonIndex < 0)
+                {
+                    focusedButtonIndex = dialogueActionsText.Count - 1;
+                }
+
+                dialogueActionsText[focusedButtonIndex].targetGraphic.color =
+                     dialogueActionsText[focusedButtonIndex].colors.highlightedColor;
+            }
+            else if (Input.GetKeyDown(KeyCode.D))
+            {
+                dialogueActionsText[focusedButtonIndex].targetGraphic.color =
+                     dialogueActionsText[focusedButtonIndex].colors.normalColor;
+
+                focusedButtonIndex++;
+                if (focusedButtonIndex >= dialogueActionsText.Count)
+                {
+                    focusedButtonIndex = 0;
+                }
+
+                dialogueActionsText[focusedButtonIndex].targetGraphic.color =
+                     dialogueActionsText[focusedButtonIndex].colors.highlightedColor;
+            }
+
+            else if(Input.GetKeyDown(KeyCode.Return) || Input.GetButtonDown("Interact"))
+            {
+                dialogueActionsText[focusedButtonIndex].onClick.Invoke();
+            }
+        }
+    }
 }
