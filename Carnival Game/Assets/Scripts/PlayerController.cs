@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour {
 
     bool controlsEnabled = true;
     bool tutorialEnabled = true;
+    private bool goingToEnable = true;
 
     void Awake()
     {
@@ -25,7 +26,7 @@ public class PlayerController : MonoBehaviour {
         rb2d = GetComponent<Rigidbody2D>();
         playerIM = GetComponent<PlayerInteractionManager>();
         helpMenu.SetActive(true);
-        controlsEnabled = false;
+        SetControlsEnabled(false);
     }
 
     private void Update()
@@ -52,15 +53,23 @@ public class PlayerController : MonoBehaviour {
                 tutorialEnabled = false;
                 if(!dialoguePanel.activeSelf)
                 {
-                    controlsEnabled = true;
+                    SetControlsEnabled(true);
                 }
             }
             else
             {
                 helpMenu.SetActive(true);
                 tutorialEnabled = true;
-                controlsEnabled = false;
+                SetControlsEnabled(false);
             }
+        }
+
+        if(goingToEnable && !controlsEnabled)
+        {
+            controlsEnabled = true;        }
+        else if (!goingToEnable && controlsEnabled)
+        {
+            controlsEnabled = false;
         }
     }
 
@@ -109,7 +118,8 @@ public class PlayerController : MonoBehaviour {
 
     public void SetControlsEnabled(bool isEnabled)
     {
-        controlsEnabled = isEnabled;
+
+        goingToEnable = isEnabled;
     }
 
     public bool ControlsEnabled()
