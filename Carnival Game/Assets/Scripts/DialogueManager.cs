@@ -66,7 +66,7 @@ public class DialogueManager : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if(isPlaying && pController.ControlsEnabled())
+        if (isPlaying && pController.ControlsEnabled())
         {
             pController.SetControlsEnabled(false);
         }
@@ -100,33 +100,8 @@ public class DialogueManager : MonoBehaviour {
             isPlaying = true;
         }
 
-        if(isPlaying && statementIndex == currentConversation.dialogStatements.Count - 1 && !isRolling)
-        {
-            if(Input.GetKeyDown(KeyCode.A))
-            {
-                dialogueActionsText[focusedButtonIndex].targetGraphic.color = new Color(1, 1, 1);
+        HandleKeySelectionInput();
 
-                focusedButtonIndex--;
-                if(focusedButtonIndex < 0)
-                {
-                    focusedButtonIndex = dialogueActionsText.Count - 1;
-                }
-
-                dialogueActionsText[focusedButtonIndex].targetGraphic.color = new Color(0.8f, 0, 0);
-            }
-            if (Input.GetKeyDown(KeyCode.D))
-            {
-                dialogueActionsText[focusedButtonIndex].targetGraphic.color = new Color(1, 1, 1);
-
-                focusedButtonIndex++;
-                if (focusedButtonIndex >= dialogueActionsText.Count)
-                {
-                    focusedButtonIndex = 0;
-                }
-
-                dialogueActionsText[focusedButtonIndex].targetGraphic.color = new Color(0.8f, 0, 0);
-            }
-        }
     }
 
     public void SetDialogSequence(Dialogue.DialogueList sequence)
@@ -202,7 +177,53 @@ public class DialogueManager : MonoBehaviour {
             button.gameObject.transform.localScale = new Vector3(1, 1, 1);
         }
         focusedButtonIndex = 0;
-        dialogueActionsText[focusedButtonIndex].targetGraphic.color = dialogueActionsText[focusedButtonIndex].targetGraphic.color = new Color(0.8f, 0, 0);
+        dialogueActionsText[focusedButtonIndex].targetGraphic.color =
+            dialogueActionsText[focusedButtonIndex].colors.highlightedColor;
 
+    }
+
+    private void HandleKeySelectionInput()
+    {
+        if(dialogueActionsText.Count == 0)
+        {
+            return;
+        }
+
+        if (isPlaying && statementIndex == currentConversation.dialogStatements.Count - 1 && !isRolling)
+        {
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                dialogueActionsText[focusedButtonIndex].targetGraphic.color =
+                     dialogueActionsText[focusedButtonIndex].colors.normalColor;
+
+                focusedButtonIndex--;
+                if (focusedButtonIndex < 0)
+                {
+                    focusedButtonIndex = dialogueActionsText.Count - 1;
+                }
+
+                dialogueActionsText[focusedButtonIndex].targetGraphic.color =
+                     dialogueActionsText[focusedButtonIndex].colors.highlightedColor;
+            }
+            else if (Input.GetKeyDown(KeyCode.D))
+            {
+                dialogueActionsText[focusedButtonIndex].targetGraphic.color =
+                     dialogueActionsText[focusedButtonIndex].colors.normalColor;
+
+                focusedButtonIndex++;
+                if (focusedButtonIndex >= dialogueActionsText.Count)
+                {
+                    focusedButtonIndex = 0;
+                }
+
+                dialogueActionsText[focusedButtonIndex].targetGraphic.color =
+                     dialogueActionsText[focusedButtonIndex].colors.highlightedColor;
+            }
+
+            else if(Input.GetKeyDown(KeyCode.Return) || Input.GetButtonDown("Interact"))
+            {
+                dialogueActionsText[focusedButtonIndex].onClick.Invoke();
+            }
+        }
     }
 }
