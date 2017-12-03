@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour {
 
     public float maxRunSpeed = 100;
     public float runSpeed = 10;
+    public GameObject helpMenu;
+    public GameObject dialoguePanel;
 
     private Rigidbody2D rb2d; // Character's rigidbody
     private PlayerInteractionManager playerIM; // InteractionManager
@@ -14,6 +16,7 @@ public class PlayerController : MonoBehaviour {
     private Animator animator;
 
     bool controlsEnabled = true;
+    bool tutorialEnabled = true;
 
     void Awake()
     {
@@ -21,6 +24,8 @@ public class PlayerController : MonoBehaviour {
         animator = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
         playerIM = GetComponent<PlayerInteractionManager>();
+        helpMenu.SetActive(true);
+        controlsEnabled = false;
     }
 
     private void Update()
@@ -36,6 +41,25 @@ public class PlayerController : MonoBehaviour {
             if(Input.GetKeyDown(KeyCode.Escape))
             {
                 Application.Quit();
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            if (tutorialEnabled)
+            {
+                helpMenu.SetActive(false);
+                tutorialEnabled = false;
+                if(!dialoguePanel.activeSelf)
+                {
+                    controlsEnabled = true;
+                }
+            }
+            else
+            {
+                helpMenu.SetActive(true);
+                tutorialEnabled = true;
+                controlsEnabled = false;
             }
         }
     }
