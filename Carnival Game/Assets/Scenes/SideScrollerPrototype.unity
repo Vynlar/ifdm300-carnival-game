@@ -1427,6 +1427,45 @@ MonoBehaviour:
     dialogStatements:
     - statement: Ha! Are you sure we're talking about the same world?
     dialogueActions:
+    - text: Try Again
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1290051032}
+            m_MethodName: HideDialogue
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 226768077}
+            m_MethodName: SetDialogState
+            m_Mode: 5
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: base
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 226768076}
+            m_MethodName: ShowInput
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
     - text: Done
       action:
         m_PersistentCalls:
@@ -1451,6 +1490,17 @@ MonoBehaviour:
               m_IntArgument: 0
               m_FloatArgument: 0
               m_StringArgument: base
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 0}
+            m_MethodName: 
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
               m_BoolArgument: 0
             m_CallState: 2
         m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -1635,7 +1685,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 241201595}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -472.6131, y: 120.16261, z: 0}
+  m_LocalPosition: {x: -434.96262, y: 141.29303, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1855266981}
@@ -1740,7 +1790,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 246781083}
   m_LocalRotation: {x: -0, y: -0, z: -0.0008118364, w: 0.9999997}
-  m_LocalPosition: {x: 2.3947601, y: -92.64014, z: 0}
+  m_LocalPosition: {x: 3.722168, y: -95.1042, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 789416611}
@@ -3333,8 +3383,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 403934158}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 35.766083, y: -152.4765, z: 0.28894457}
-  m_LocalScale: {x: 1.2390212, y: 1.2390215, z: 1.2390215}
+  m_LocalPosition: {x: 100.709755, y: -58.3552, z: 0.28894457}
+  m_LocalScale: {x: 1.4903789, y: 1.4903793, z: 1.4903793}
   m_Children:
   - {fileID: 606485796}
   - {fileID: 241201596}
@@ -4840,7 +4890,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 606485795}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.129608, y: -196.90738, z: 0}
+  m_LocalPosition: {x: -4.612671, y: -175.77698, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1122093262}
@@ -5573,7 +5623,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 703337474}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 298.63824, y: -73.66, z: 0}
+  m_LocalPosition: {x: 275.15353, y: -73.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 606485796}
@@ -5908,7 +5958,7 @@ Prefab:
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.000015258789
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
@@ -6142,7 +6192,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 775489332}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.000030517578, y: 73.58179, z: 0}
+  m_LocalPosition: {x: -0.000030517578, y: 81.04013, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 789416611}
@@ -6696,17 +6746,14 @@ MonoBehaviour:
   dQueues:
   - StateKey: description
     dialogStatements:
-    - statement: "\"2/10 There\u2019s been no shortage of fun and excitement around
-        here. I\u2019ve been working hard to finish my next draft in time"
-    - statement: "for the critique group next week, and that\u2019s meant I\u2019ve
-        been working away in my basement office. I can hear Scruffy "
-    - statement: 'padding around all day upstairs--chasing his tail and who knows
-        what else until I surface or Sharin comes home, '
-    - statement: at which point either or both of us are covered with slobbery kisses.
-        And tonight when Sharin and I started a movie,
-    - statement: " that dog weaseled his way onto the couch on top of both our laps.
-        He\u2019s not a puppy any more, but he sure is here to stay. "
-    - statement: "Sharin and I both agree--he\u2019s a great addition to the family.\u201D"
+    - statement: "\"2/10 I\u2019ve been working hard to finish my next draft in time
+        for the critique group next week. "
+    - statement: "That\u2019s meant I\u2019ve been working away in my basement office. "
+    - statement: I can hear Scruffy padding around all day upstairs--chasing his tail
+        and who knows what else until I surface or Sharin comes home.
+    - statement: At that point we're both covered with slobbery kisses.
+    - statement: "He\u2019s not a puppy any more, but he sure is here to stay. Sharin
+        and I both agree--he\u2019s a great addition to the family.\u201D"
     - statement: "It\u2019s signed with the initials BD."
     dialogueActions:
     - text: Done
@@ -7897,7 +7944,7 @@ Prefab:
     - target: {fileID: 224980117017058540, guid: 5b5f22b7989765d44aedaf1650ed07a4,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.4916306
+      value: -2.7029343
       objectReference: {fileID: 0}
     - target: {fileID: 224980117017058540, guid: 5b5f22b7989765d44aedaf1650ed07a4,
         type: 2}
@@ -7992,7 +8039,7 @@ Prefab:
     - target: {fileID: 224380199551994916, guid: 5b5f22b7989765d44aedaf1650ed07a4,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -42.642097
+      value: -46.163834
       objectReference: {fileID: 0}
     - target: {fileID: 224876441471905386, guid: 5b5f22b7989765d44aedaf1650ed07a4,
         type: 2}
@@ -8007,7 +8054,7 @@ Prefab:
     - target: {fileID: 224857053913052608, guid: 5b5f22b7989765d44aedaf1650ed07a4,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 47.7621
+      value: 51.28384
       objectReference: {fileID: 0}
     - target: {fileID: 224838941114613146, guid: 5b5f22b7989765d44aedaf1650ed07a4,
         type: 2}
@@ -8047,7 +8094,7 @@ Prefab:
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.000015258789
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
@@ -8423,7 +8470,7 @@ Prefab:
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -116.331924
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
@@ -9767,6 +9814,45 @@ MonoBehaviour:
     dialogStatements:
     - statement: Ha! Are you sure we're talking about the same world?
     dialogueActions:
+    - text: Try Again
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1290051032}
+            m_MethodName: HideDialogue
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 1036971645}
+            m_MethodName: SetDialogState
+            m_Mode: 5
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: base
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 1036971646}
+            m_MethodName: ShowInput
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
     - text: Done
       action:
         m_PersistentCalls:
@@ -10919,7 +11005,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1122093261}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -268.81528, y: 67.194, z: 0}
+  m_LocalPosition: {x: -247.67905, y: 67.194, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 606485796}
@@ -11227,7 +11313,7 @@ Prefab:
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.000015258789
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
@@ -11948,17 +12034,15 @@ MonoBehaviour:
   dQueues:
   - StateKey: description
     dialogStatements:
-    - statement: "\u201C3/15 I have the chance to pitch to an agent next week. I\u2019ve
-        been wading through that mountain of manuscripts from last month"
-    - statement: when I asked my friends to look over my book. I think they must have
-        been competing to see who could use every last drop of red ink first.
-    - statement: "But, constructive feedback is the most valuable thing for a novel,
-        and I\u2019m getting excited. I just hope someone else finds 'Carnivals and
-        Creepers'"
-    - statement: "as interesting as Sharin and I do. It\u2019s been a lot of work
-        getting this book put together, but I\u2019m very proud of the result."
+    - statement: "\u201C3/15 I have the chance to pitch to an agent next week. "
+    - statement: "I\u2019ve been wading through that mountain of revised manuscripts
+        from last month when I asked my friends to look over my book."
+    - statement: "It\u2019s been a lot of work getting this novel put together, but
+        I\u2019m very proud of the result."
     - statement: "Who would have thought that being a writer could be so fulfilling?\u201D"
     - statement: "It\u2019s signed with the initials BD."
+    - statement: 
+    - statement: 
     dialogueActions:
     - text: Done
       action:
@@ -14514,7 +14598,7 @@ Prefab:
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.000015258789
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
@@ -14969,7 +15053,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1444232749}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 35.766083, y: -152.4765, z: 0.28894457}
+  m_LocalPosition: {x: 100.709755, y: -58.3552, z: 0.28894457}
   m_LocalScale: {x: 1.8824253, y: 1.8824259, z: 1.8824259}
   m_Children: []
   m_Father: {fileID: 558855357}
@@ -18851,11 +18935,12 @@ MonoBehaviour:
     - statement: 'Tidy, slanted handwriting fills the page of loose paper on the ground.
         It looks like it was torn from a book or journal of sorts. '
     - statement: "It reads, \u201C9/15 Last I remember I was at the carnival. Now\u2026
-        Everything is dark. I\u2019m alone, but the emptiness is somehow soothing."
+        Everything is dark. I\u2019m alone, but the emptiness is somehow soothing. "
     - statement: "The only marking I can find is on a door marked \u2018Exit.\u2019
-        It\u2019s strangely fitting. The room beyond is not much to call home, "
-    - statement: "but then again, there\u2019s not much to go back to, anyhow. Maybe
-        time to start rebuilding.\u201D"
+        It\u2019s strangely fitting. "
+    - statement: "The room beyond is not much to call home, but then again, there\u2019s
+        not much to go back to, anyhow. "
+    - statement: "Maybe time to start rebuilding.\u201D"
     - statement: "It\u2019s signed with the initials BD."
     dialogueActions:
     - text: Pick Up
@@ -18921,11 +19006,29 @@ MonoBehaviour:
     - statement: "It reads, \u201C9/15 Last I remember I was at the carnival. Now\u2026
         Everything is dark. I\u2019m alone, but the emptiness is somehow soothing."
     - statement: "The only marking I can find is on a door marked \u2018Exit.\u2019
-        It\u2019s strangely fitting. The room beyond is not much to call home, "
-    - statement: "but then again, there\u2019s not much to go back to, anyhow. Maybe
-        time to start rebuilding.\u201D"
+        It\u2019s strangely fitting. "
+    - statement: "The room beyond is not much to call home, but then again, there\u2019s
+        not much to go back to, anyhow. "
+    - statement: "Maybe time to start rebuilding.\u201D"
     - statement: "It\u2019s signed with the initials BD."
     dialogueActions:
+    - text: Done
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1290051032}
+            m_MethodName: HideDialogue
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
     - text: Done
       action:
         m_PersistentCalls:
@@ -19903,7 +20006,7 @@ Prefab:
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.000015258789
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
@@ -20465,7 +20568,7 @@ Prefab:
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.000015258789
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
@@ -21424,6 +21527,45 @@ MonoBehaviour:
     dialogStatements:
     - statement: Ha! Are you sure we're talking about the same world?
     dialogueActions:
+    - text: Try Again
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1290051032}
+            m_MethodName: HideDialogue
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 2132195257}
+            m_MethodName: SetDialogState
+            m_Mode: 5
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: base
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 2132195256}
+            m_MethodName: ShowInput
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
     - text: Done
       action:
         m_PersistentCalls:
@@ -21625,7 +21767,7 @@ Prefab:
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -116.331924
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
