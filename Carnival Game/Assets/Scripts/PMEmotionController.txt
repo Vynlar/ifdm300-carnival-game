@@ -1,0 +1,39 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PMEmotionController : MonoBehaviour {
+    private Animator animator;
+
+    // Use this for initialization
+    void Start () {
+        animator = GetComponent<Animator>();	
+	}
+
+    public void makeNormal()
+    {
+        animator.SetBool("isNormal", true);
+		animator.SetBool("isAngry", false);
+		animator.SetBool("isHappy", false);
+    }
+
+    public void makeAngry()
+    {
+        animator.SetBool("isNormal", false);
+		animator.SetBool("isAngry", true);
+		animator.SetBool("isHappy", false);
+    }
+	
+	public void makeHappy()
+	{
+		animator.SetBool("isNormal", false);
+		animator.SetBool("isAngry", false);
+		animator.SetBool("isHappy", true);
+	}
+	
+	// Update is called once per frame
+	void Update () 
+	{
+		
+	}
+}
