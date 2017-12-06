@@ -6,7 +6,7 @@ using UnityEngine;
 public class CutScene : MonoBehaviour {
     public float endTime = 12.0f;
     float timer = 0.0f;
-
+    public string scene;
     void Start()
     {
         
@@ -16,7 +16,7 @@ public class CutScene : MonoBehaviour {
     {
         if(timer >= endTime)
         {
-            SceneManager.LoadScene("SideScrollerPrototype");
+            SceneManager.LoadScene(scene);
         }
         timer += Time.deltaTime;
     }
