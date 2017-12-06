@@ -12,6 +12,9 @@ public class InventoryUI : MonoBehaviour {
     // List of all inventory slots
     public List<GameObject> inventorySlots;
 
+    // Get a reference to the Image UI
+    public GameObject noteImagePanel;
+
 	// Use this for initialization
 	void Start () {
 		if(Instance != null)
@@ -43,13 +46,33 @@ public class InventoryUI : MonoBehaviour {
             Image invImage = slot.GetComponent<Image>();
             if (invImage.sprite == null)
             {
-                invImage.sprite = sRenderer.sprite;
-                // Make the image visible
-                invImage.color = new Color(255, 255, 255, 255);
+                if(obj.tag == "Note")
+                {
+                    Image img = noteImagePanel.transform.Find("Image").GetComponent<Image>();
+                    img.sprite = obj.GetComponent<Image>().sprite;
 
-                // Enables inspecting items in inventory
-                Button slotButton = slot.GetComponent<Button>();
-                slotButton.onClick.AddListener(obj.GetComponent<Dialogue>().TriggerDialog);
+                    invImage.sprite = sRenderer.sprite;
+                    // Make the image visible
+                    invImage.color = new Color(255, 255, 255, 255);
+
+                    // Enables inspecting items in inventory
+                    Button slotButton = slot.GetComponent<Button>();
+
+                    GameObject tempObj = obj;
+                    slotButton.onClick.AddListener(() => { img.sprite = tempObj.GetComponent<Image>().sprite; });
+                    
+                    slotButton.onClick.AddListener(ToggleImageViewer);
+                }
+                else
+                {
+                    invImage.sprite = sRenderer.sprite;
+                    // Make the image visible
+                    invImage.color = new Color(255, 255, 255, 255);
+
+                    // Enables inspecting items in inventory
+                    Button slotButton = slot.GetComponent<Button>();
+                    slotButton.onClick.AddListener(obj.GetComponent<Dialogue>().TriggerDialog);
+                }
                 break;
             }
         }
@@ -80,7 +103,6 @@ public class InventoryUI : MonoBehaviour {
             }
         }
 
-        //CompressItems();
     }
 
     // We want to compress the items together whenever an element is 
@@ -118,6 +140,11 @@ public class InventoryUI : MonoBehaviour {
                 }
             }
         }
+    }
+
+    private void ToggleImageViewer()
+    {
+        noteImagePanel.SetActive(!noteImagePanel.activeSelf);
     }
 
 }

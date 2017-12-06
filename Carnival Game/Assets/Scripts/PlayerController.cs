@@ -31,7 +31,12 @@ public class PlayerController : MonoBehaviour {
 
     private void Update()
     {
-        if(controlsEnabled)
+        if(InventoryUI.Instance.noteImagePanel.activeSelf)
+        {
+            return;
+        }
+
+        if (controlsEnabled)
         {
             // Test for interaction input
             if (Input.GetButtonDown("Interact"))
@@ -75,9 +80,13 @@ public class PlayerController : MonoBehaviour {
 
     // Using FixedUpdate for physics
     void FixedUpdate () {
+        if (InventoryUI.Instance.noteImagePanel.activeSelf)
+        {
+            return;
+        }
 
         // Check for left and right input 
-        if(controlsEnabled)
+        if (controlsEnabled)
         {
             if (Input.GetKey(KeyCode.D))
             {
