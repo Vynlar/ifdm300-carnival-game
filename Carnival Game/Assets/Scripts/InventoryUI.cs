@@ -54,6 +54,7 @@ public class InventoryUI : MonoBehaviour {
                     invImage.sprite = sRenderer.sprite;
                     // Make the image visible
                     invImage.color = new Color(255, 255, 255, 255);
+                    invImage.preserveAspect = true;
 
                     // Enables inspecting items in inventory
                     Button slotButton = slot.GetComponent<Button>();
@@ -67,6 +68,7 @@ public class InventoryUI : MonoBehaviour {
                 {
                     invImage.sprite = sRenderer.sprite;
                     // Make the image visible
+                    invImage.preserveAspect = true;
                     invImage.color = new Color(255, 255, 255, 255);
 
                     // Enables inspecting items in inventory
