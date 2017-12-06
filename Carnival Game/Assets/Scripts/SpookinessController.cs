@@ -14,6 +14,11 @@ public class SpookinessController : MonoBehaviour {
     {
         animator.SetBool("isSpooky", true);
     }
+
+    public void makeNotSpooky()
+    {
+        animator.SetBool("isSpooky", false);
+    }
 	
 	// Update is called once per frame
 	void Update () {
