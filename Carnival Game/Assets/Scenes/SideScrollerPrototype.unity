@@ -6531,7 +6531,7 @@ Prefab:
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.000015258789
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
@@ -8580,7 +8580,7 @@ Prefab:
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.000015258789
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
@@ -8956,7 +8956,7 @@ Prefab:
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -116.331924
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
@@ -11981,7 +11981,7 @@ Prefab:
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.000015258789
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
@@ -15470,7 +15470,7 @@ Prefab:
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.000015258789
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
@@ -19827,56 +19827,6 @@ MonoBehaviour:
     - statement: "Maybe time to start rebuilding.\u201D"
     - statement: "It\u2019s signed with the initials BD."
     dialogueActions:
-    - text: Pick Up
-      action:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 1290051032}
-            m_MethodName: HideDialogue
-            m_Mode: 1
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-          - m_Target: {fileID: 865308947}
-            m_MethodName: AddItem
-            m_Mode: 2
-            m_Arguments:
-              m_ObjectArgument: {fileID: 1862440144}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-          - m_Target: {fileID: 1862440145}
-            m_MethodName: SetDialogState
-            m_Mode: 5
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: description
-              m_BoolArgument: 0
-            m_CallState: 2
-          - m_Target: {fileID: 1862440146}
-            m_MethodName: Play
-            m_Mode: 1
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
     - text: Done
       action:
         m_PersistentCalls:
@@ -19941,86 +19891,6 @@ MonoBehaviour:
             m_CallState: 2
         m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
---- !u!82 &1862440146
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1862440144}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 01287f9cbf86f94418b3d65fba1d11c2, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 3.9479332
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
 --- !u!1 &1867909831
 GameObject:
   m_ObjectHideFlags: 0
@@ -21073,7 +20943,7 @@ Prefab:
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.000015258789
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
@@ -21449,56 +21319,6 @@ MonoBehaviour:
         pain."'
     - statement: Signed, Bryan Dowey.
     dialogueActions:
-    - text: Pick Up
-      action:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 1290051032}
-            m_MethodName: HideDialogue
-            m_Mode: 1
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-          - m_Target: {fileID: 865308947}
-            m_MethodName: AddItem
-            m_Mode: 2
-            m_Arguments:
-              m_ObjectArgument: {fileID: 1997434239}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-          - m_Target: {fileID: 1997434240}
-            m_MethodName: SetDialogState
-            m_Mode: 5
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: description
-              m_BoolArgument: 0
-            m_CallState: 2
-          - m_Target: {fileID: 1997434241}
-            m_MethodName: Play
-            m_Mode: 1
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
     - text: Done
       action:
         m_PersistentCalls:
@@ -21546,86 +21366,6 @@ MonoBehaviour:
             m_CallState: 2
         m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
---- !u!82 &1997434241
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1997434239}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 01287f9cbf86f94418b3d65fba1d11c2, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 3.9479332
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
 --- !u!114 &1997434244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21726,7 +21466,7 @@ Prefab:
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.000015258789
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
@@ -23020,7 +22760,7 @@ Prefab:
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -116.331924
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224567069824458706, guid: a50c98c1d7fe66846aaed5eadfd19565,
         type: 2}
